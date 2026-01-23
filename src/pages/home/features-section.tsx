@@ -15,7 +15,6 @@ export function FeaturesSection() {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{
-            // once: breakpoint === 'mobile',
             once: true, // Animar solo la primera vez que entra en vista
             amount: 0.3
           }}
@@ -34,13 +33,12 @@ export function FeaturesSection() {
           {FEATURES.map((feature, index) => (
             <motion.div
               key={feature.letter}
-              initial={animations[index]}
-              whileInView={{ x: 0, y: 0, opacity: 1 }}
+              initial={animations[index]} // Animación inicial desde constantes
+              whileInView={{ x: 0, y: 0, opacity: 1 }} // Animar a la posición original
               viewport={{
-                // once: breakpoint === 'mobile',
                 once: true, // Animar solo la primera vez que entra en vista
                 amount: 0.3,
-                margin: "0px 0px -100px 0px"
+                margin: "0px 0px -50px 0px"
               }}
               transition={{
                 duration: 0.6,

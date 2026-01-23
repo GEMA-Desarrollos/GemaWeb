@@ -67,7 +67,7 @@ export function ProductsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{
-                duration: 0.8 + (index * 0.1),
+                duration: 0.4 + (index * 0.1),
                 delay: index * 0.5,
                 ease: "easeOut"
               }}

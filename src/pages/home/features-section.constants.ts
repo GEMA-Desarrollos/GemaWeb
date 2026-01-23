@@ -10,9 +10,9 @@ export const ANIMATIONS: Record<string, AnimationDirection[]> = {
   ],
   // 1 columna
   mobile: [
-    { x: -100, opacity: 0 }, // S - izquierda → derecha
-    { x: 100, opacity: 0 },  // A - derecha → izquierda
-    { x: -100, opacity: 0 }, // I - izquierda → derecha
-    { x: 100, opacity: 0 },  // C - derecha → izquierda
+    { x: -10, opacity: 0 }, // S - izquierda → derecha
+    { x: 10, opacity: 0 },  // A - derecha → izquierda
+    { x: -10, opacity: 0 }, // I - izquierda → derecha
+    { x: 10, opacity: 0 },  // C - derecha → izquierda
   ],
 }
