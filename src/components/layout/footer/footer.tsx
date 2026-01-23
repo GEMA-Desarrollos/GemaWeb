@@ -6,7 +6,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        "bg-[#1e293b] text-white py-12 text-center",
+        "bg-foreground text-white py-12 text-center",
         className
       )}
     >

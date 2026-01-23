@@ -1,11 +1,5 @@
 import Autoplay from "embla-carousel-autoplay"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
 import { TestimonialCard } from "./testimonial-card"
 import { TESTIMONIALS } from "./home.constants"
 import { motion } from "framer-motion"

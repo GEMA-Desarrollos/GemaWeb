@@ -1,5 +1,5 @@
 
-import type { Product, /* Feature, */ Stat, Testimonial, FeatureCardProps } from "./home.types"
+import type { Product, Stat, Testimonial, FeatureCardProps } from "./home.types"
 import gemaImg from "@/assets/gema.png"
 import turneroImg from "@/assets/turnero.png"
 import feComerciosImg from "@/assets/fe-comercios.png"

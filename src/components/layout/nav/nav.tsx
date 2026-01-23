@@ -111,7 +111,7 @@ export function Nav({ menuItems }: NavProps) {
             />
           </button>
           {isDropdownOpen && (
-            <ul className="flex flex-col gap-2 pl-12 list-none m-0 w-full bg-[#1e293b] py-2 animate-in slide-in-from-top-2 fade-in-0 duration-300">
+            <ul className="flex flex-col gap-2 pl-12 list-none m-0 w-full bg-foreground py-2 animate-in slide-in-from-top-2 fade-in-0 duration-300">
               {item.items.map((subItem) => (
                 <li key={subItem.href}>
                   <a

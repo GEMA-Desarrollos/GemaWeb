@@ -5,12 +5,6 @@ export interface Product {
   features: readonly string[]
 }
 
-export interface Feature {
-  letter: string
-  title: string
-  description: string
-}
-
 export interface Stat {
   value: string
   label: string
@@ -44,11 +38,4 @@ export interface TestimonialCardProps {
   company: string
   comment: string
   rating: number
-}
-
-export interface FeatureCardProps {
-  letter: string
-  title: string
-  description: string
-  animation?: object // El JSON de Lottie
 }

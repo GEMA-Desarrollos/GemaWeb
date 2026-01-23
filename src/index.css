@@ -143,14 +143,10 @@
     @apply bg-background text-foreground;
   }
   html {
-    /* @apply font-sans; */
     font-family: "Lato", sans-serif;
-    /* font-family: "Nunito", sans-serif; */
     }
     h1, h2, h3, h4, h5, h6 {
       @apply font-sans;
-      /* font-family: "Lato", sans-serif; */
-      /* font-family: "Nunito", sans-serif; */
     }
 }
 
@@ -163,8 +159,5 @@
 }
 
 .container-custom {
-  /* max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem; */
   @apply max-w-300 mx-auto py-0 px-8;
 }

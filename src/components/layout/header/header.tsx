@@ -7,7 +7,6 @@ export function Header({ className }: HeaderProps) {
   return (
     <header
       style={{
-        // background: "linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%)",
         boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
       }}
       className={cn(

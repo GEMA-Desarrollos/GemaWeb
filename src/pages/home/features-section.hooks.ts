@@ -14,11 +14,9 @@ export function useBreakpoint(): Breakpoint {
       } else {
         setBreakpoint("mobile")
       }
-    }
-    
+    }    
     updateBreakpoint()
     window.addEventListener("resize", updateBreakpoint)
-    
     return () => window.removeEventListener("resize", updateBreakpoint)
   }, [])
 

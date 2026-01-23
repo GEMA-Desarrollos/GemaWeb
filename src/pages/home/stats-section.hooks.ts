@@ -21,11 +21,9 @@ export function useStatsVisibility() {
         threshold: 0.2, // Se activa cuando el 20% del elemento es visible
       }
     )
-
     if (sectionRef.current) {
       observer.observe(sectionRef.current)
     }
-
     return () => observer.disconnect()
   }, [])
 
