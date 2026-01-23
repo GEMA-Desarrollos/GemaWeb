@@ -1,13 +1,15 @@
 import { STATS } from "./home.constants"
-import AnimatedNumber from "react-animated-numbers"
-import { useStatsVisibility } from "./stats-section.hooks"
-import { parseStatValue } from "./stats-section.utils"
+// import AnimatedNumber from "react-animated-numbers"
+// import { useStatsVisibility } from "./stats-section.hooks"
+// import { parseStatValue } from "./stats-section.utils"
 
 export function StatsSection() {
-  const { isVisible, sectionRef } = useStatsVisibility()
+  // const { isVisible, sectionRef } = useStatsVisibility()
+
+  // ref={sectionRef}
 
   return (
-    <section ref={sectionRef} className="py-15 bg-dark-blue text-white">
+    <section  className="py-15 bg-dark-blue text-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
           {/* {STATS.map((stat) => {
