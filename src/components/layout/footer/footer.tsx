@@ -1,5 +1,5 @@
 import { Phone, MapPin, Mail, Clock } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "../../../lib/utils"
 import type { FooterProps } from "./footer.types"
 import { ABOUT_INFO, SOCIAL_LINKS, CONTACT_INFO, COPYRIGHT } from "./footer.constants"
 
@@ -94,7 +94,7 @@ export function Footer({ className }: FooterProps) {
         {/* Copyright */}
         <div className="pt-8 border-t border-white/10 text-center">
           <p className="text-white/70 text-sm">
-            © {COPYRIGHT.year} {COPYRIGHT.company}. {COPYRIGHT.text}
+            {COPYRIGHT}
           </p>
         </div>
       </div>
