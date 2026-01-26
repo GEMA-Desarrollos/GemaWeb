@@ -7,7 +7,7 @@ import { ContactSection } from "./contact-section";
 
 export function HomePage() {
   return (
-    <div className="pt-[65px]">
+    <div className="pt-16.25">
       <HeroSection />
       <ProductsSection />
       <StatsSection />
