@@ -4,10 +4,10 @@ import gemaImg from "@/assets/gema.png"
 import turneroImg from "@/assets/turnero.png"
 import feComerciosImg from "@/assets/fe-comercios.png"
 import trazabilidadImg from "@/assets/trazabilidad.png"
-import puzzleAnimation from "../../assets/puzzle.json"
-import databaseAnimation from "../../assets/database.json"
-import checkAnimation from "../../assets/check.json"
-import satelliteAnimation from "../../assets/satellite.json"
+import puzzleAnimation from "@/assets/puzzle.json"
+import databaseAnimation from "@/assets/database.json"
+import checkAnimation from "@/assets/check.json"
+import satelliteAnimation from "@/assets/satellite.json"
 
 export const PRODUCTS: readonly Product[] = [
   {

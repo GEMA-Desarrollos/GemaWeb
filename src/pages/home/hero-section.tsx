@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+// import bannerHero from "https://pixabay.com/images/download/startup-593304_1920.jpg";
 
 export function HeroSection() {
   return (
@@ -12,10 +13,16 @@ export function HeroSection() {
         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
       >
         <source
-          src="https://res.cloudinary.com/dhlabj0dm/video/upload/v1769189486/office_clip_borpno.mp4"
+          src={"https://res.cloudinary.com/dhlabj0dm/video/upload/v1769189486/office_clip_borpno.mp4"}
           type="video/mp4"
         />
       </video>
+
+      {/* <img
+        src={bannerHero}
+        alt="Hero Background"
+        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
+      /> */}
 
       <div className="absolute inset-0 bg-black/50" />
       <div className="container-custom relative z-10 flex flex-col justify-center min-h-50 md:min-h-75">
