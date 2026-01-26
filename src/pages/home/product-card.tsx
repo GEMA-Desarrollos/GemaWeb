@@ -10,14 +10,14 @@ export function ProductCard({ icon, title, description, features }: ProductCardP
           <div className="w-16 h-16 rounded-full flex items-center justify-center mb-2">
             <img src={icon} alt={title} className="w-full h-full object-contain " />
           </div>
-          <h3 className="text-xl font-semibold mb-2 text-center">{title}</h3>
+          <h3 className="text-xl font-semibold mb-2 text-center select-none">{title}</h3>
         </div>
-        <p className="text-muted-foreground leading-relaxed text-center">{description}</p>
+        <p className="text-muted-foreground leading-relaxed text-center select-none">{description}</p>
       </CardHeader>
       <CardContent>
         <ul className="space-y-2">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center gap-2 text-muted-foreground">
+            <li key={index} className="flex items-center gap-2 text-muted-foreground select-none">
               <CheckIcon className="size-5 text-primary shrink-0" />
               <span>{feature}</span>
             </li>

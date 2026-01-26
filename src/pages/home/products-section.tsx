@@ -34,8 +34,8 @@ export function ProductsSection() {
           plugins={[
             Autoplay({
               delay: 3000,
-              stopOnInteraction: true, // Detiene el autoplay al interactuar
-              stopOnMouseEnter: true, // Detiene el autoplay al pasar el ratón por encima
+              stopOnInteraction: true,
+              stopOnMouseEnter: true,
             }),
           ]}
           opts={{

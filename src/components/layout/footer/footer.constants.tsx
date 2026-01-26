@@ -2,7 +2,7 @@ import { XIcon, FacebookIcon, InstagramIcon, YoutubeIcon, WhatsappIcon, Linkedin
 
 export const ABOUT_INFO = {
   title: "Sobre nosotros",
-  description: "GEMA, es un software de gestión integral para la Farmacia que brinda numerosas posibilidades para la dispensación de productos y para la administración general."
+  description: "Somos una empresa de desarrollo de software especializada en soluciones tecnológicas para empresas. Creamos sistemas de gestión integral que optimizan procesos administrativos y mejoran la eficiencia operativa de nuestros clientes."
 } as const
 
 export const SOCIAL_LINKS = [
@@ -62,8 +62,4 @@ export const CONTACT_INFO = {
   ],
 } as const
 
-export const COPYRIGHT = {
-  year: 2016,
-  company: "Gema",
-  text: "Todos los derechos reservados."
-} as const
+export const COPYRIGHT = `© ${new Date().getFullYear()} Gema. Todos los derechos reservados.` as const
