@@ -10,7 +10,6 @@ export function XIcon(props: IconProps) {
     </svg>
   )
 }
-
 export function FacebookIcon(props: IconProps) {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" {...props}>
@@ -18,7 +17,6 @@ export function FacebookIcon(props: IconProps) {
     </svg>
   )
 }
-
 export function YoutubeIcon(props: IconProps) {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" {...props}>
@@ -26,7 +24,6 @@ export function YoutubeIcon(props: IconProps) {
     </svg>
   )
 }
-
 export function WhatsappIcon(props: IconProps) {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" {...props}>
@@ -34,7 +31,6 @@ export function WhatsappIcon(props: IconProps) {
     </svg>
   )
 }
-
 export function LinkedinIcon(props: IconProps) {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" {...props}>
@@ -42,7 +38,6 @@ export function LinkedinIcon(props: IconProps) {
     </svg>
   )
 }
-
 export function InstagramIcon(props: IconProps) {
   return (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" {...props}>

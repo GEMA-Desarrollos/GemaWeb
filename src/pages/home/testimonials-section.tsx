@@ -33,8 +33,8 @@ export function TestimonialsSection() {
         
         {/* Carousel para móvil y tablet */}
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{
             once: true,
             amount: 0.3
