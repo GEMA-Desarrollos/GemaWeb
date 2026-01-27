@@ -24,7 +24,7 @@ export function HeroSection() {
       /> */}
 
       <div className="absolute inset-0 bg-black/50" />
-      <div className="container-custom relative z-10 flex flex-col justify-center min-h-50 md:min-h-75">
+      <div className="container-custom px-4! sm:px-8! relative z-10 flex flex-col justify-center min-h-50 md:min-h-75">
         <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-white min-h-18.75 font-mono">
           <Typewriter
             options={{

@@ -1,6 +1,14 @@
+import { motion } from "framer-motion"
+
 export function ContactSection() {
   return (
-    <section className="py-15 border-t border-gray-200">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="py-15 border-t border-gray-200"
+    >
       <div className="container-custom text-center">
         <h2 className="text-4xl font-bold mb-4">¿Listo para comenzar?</h2>
         <p className="text-xl text-muted-foreground mb-8">
@@ -11,6 +19,6 @@ export function ContactSection() {
           Solicitar Información
         </button>
       </div>
-    </section>
+    </motion.section>
   )
 }

@@ -30,33 +30,40 @@ export function ProductsSection() {
         </motion.div>
         
         {/* Carousel para móvil y tablet */}
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 3000,
-              stopOnInteraction: true,
-              stopOnMouseEnter: true,
-            }),
-          ]}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="mt-12 lg:hidden"
+        <motion.div
+          initial={{ y: 25, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <CarouselContent className="-ml-4">
-            {PRODUCTS.map((product) => (
-              <CarouselItem 
-                key={product.title} 
-                className="pl-4 basis-full md:basis-1/3"
-              >
-                <ProductCard {...product} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-0 md:left-0 top-[55%]" />
-          <CarouselNext className="right-0 md:right-0 top-[55%]" />
-        </Carousel>
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: true,
+                stopOnMouseEnter: true,
+              }),
+            ]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="mt-12 lg:hidden"
+          >
+            <CarouselContent className="-ml-4">
+              {PRODUCTS.map((product) => (
+                <CarouselItem 
+                  key={product.title} 
+                  className="pl-4 basis-full md:basis-1/3"
+                >
+                  <ProductCard {...product} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 md:left-0 top-[55%]" />
+            <CarouselNext className="right-0 md:right-0 top-[55%]" />
+          </Carousel>
+        </motion.div>
 
         {/* Grid para desktop con animaciones */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-10 mt-12">

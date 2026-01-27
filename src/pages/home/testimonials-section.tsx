@@ -16,10 +16,7 @@ export function TestimonialsSection() {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{
-            once: true,
-            amount: 0.3
-          }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <h2 className="text-4xl font-bold text-center mb-4">
@@ -35,10 +32,7 @@ export function TestimonialsSection() {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{
-            once: true,
-            amount: 0.3
-          }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <Carousel
@@ -70,16 +64,8 @@ export function TestimonialsSection() {
               key={index}
               initial={animations[index]}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
-              viewport={{
-                once: true,
-                amount: 0.3,
-                margin: "0px 0px -50px 0px"
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}
+              viewport={{ once: true, amount: 0.3, margin: "0px 0px -50px 0px" }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <TestimonialCard key={testimonial.name} {...testimonial} />
             </motion.div>
