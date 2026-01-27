@@ -133,14 +133,11 @@ export function Nav({ menuItems }: NavProps) {
   }
 
   return (
-    <nav className="max-w-300 mx-auto px-8 flex justify-between items-center relative">
-      <a href="/" className="text-3xl font-bold tracking-wide">
-        [G]
+    <nav className="max-w-300 mx-auto px-8 h-8 flex justify-between items-center relative">
+      <a href="/" className="flex items-center h-8">
+        <img src="zoltan-white.svg" alt="GEMA" className="h-8 w-auto" />
+        <strong className="hidden sm:flex ml-2 text-2xl font-lato items-center">GEMA</strong>
       </a>
-
-      {/* <a href="/" className="text-3xl font-bold tracking-wide bg-white rounded-full p-1">
-        <img src="logo-empresa.svg" alt="GEMA" className="h-8 sm:h-9 w-auto" />
-      </a> */}
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 list-none m-0 p-0 items-center">
