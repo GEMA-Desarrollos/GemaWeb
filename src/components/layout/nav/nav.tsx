@@ -148,7 +148,7 @@ export function Nav({ menuItems }: NavProps) {
       <Button
         variant="ghost"
         size="icon"
-        className="md:hidden text-white hover:bg-white/10"
+        className="md:hidden text-white hover:bg-transparent hover:text-white hover:scale-110 hover:transition-transform"
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
@@ -157,7 +157,7 @@ export function Nav({ menuItems }: NavProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden absolute top-13 left-0 right-0 bg-dark-blue flex flex-col gap-4 list-none m-0 py-6 shadow-lg animate-in slide-in-from-top-4 fade-in-0 duration-300">
+        <ul className="md:hidden absolute top-12 left-0 right-0 bg-dark-blue flex flex-col gap-4 list-none m-0 py-6 shadow-lg animate-in slide-in-from-top-4 fade-in-0 duration-300">
           {menuItems.map(renderMobileMenuItem)}
         </ul>
       )}
