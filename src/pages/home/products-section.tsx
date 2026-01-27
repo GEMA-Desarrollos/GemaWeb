@@ -15,7 +15,7 @@ export function ProductsSection() {
     <section id="productos" className="py-15">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 2, ease: "easeOut" }}
