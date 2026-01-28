@@ -9,6 +9,7 @@ import siroFormulario from "@/assets/image-siro-formulario.jpg";
 import animationForm from "@/assets/animation-form.json";
 import animationPayment from "@/assets/animation-payment.json";
 import animationMoney from "@/assets/animation-money.json";
+import { PAGE_TITLE, CUPON_SECTION, BONUS_SECTION, OTHER_PAYMENT_SECTION, BANK_ACCOUNT, BANK_TRANSFER_NOTE, } from "./medios-pago.constants";
 
 export function MediosPagoPage() {
   const printFormulario = usePrintImage(siroFormulario);
@@ -17,9 +18,8 @@ export function MediosPagoPage() {
     <article className="py-15! container-custom">
       <header className="mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-          Pago de cuotas GEMA
+          {PAGE_TITLE}
         </h1>
-        
         <figure className="my-6">
           <img
             src={siroInstrucciones} 
@@ -38,14 +38,11 @@ export function MediosPagoPage() {
               autoplay={true}
             />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-semibold">Descargá tu cupón</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold">{CUPON_SECTION.title}</h2>
         </div>
-
         <p className="mb-4">
-          Descargá tu cupón de pago desde tu Estado de Cuenta en Gema Web Services 
-          y pagá por todos estos medios:
+          {CUPON_SECTION.description}
         </p>
-
         <div className="flex flex-wrap items-center gap-4 justify-center my-6">
           <img 
             src={siroPagoEfectivo} 
@@ -69,20 +66,21 @@ export function MediosPagoPage() {
               autoplay={true}
             />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-semibold">¡Adherite y Pagá Menos!</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold">{BONUS_SECTION.title}</h2>
         </div>
-        
         <ul className="list-disc list-inside space-y-2 mb-4">
-          <li>Sujeto a disponibilidad y autorización de las entidades correspondientes.</li>
-          <li>10% bonificación en débito automático desde tu CBU (Válido al primer vencimiento)</li>
-          <li>5% bonificación en débito automático con tarjeta de crédito (Válido al primer vencimiento)</li>
+          {BONUS_SECTION.disclaimers.map((disclaimer, index) => (
+            <li key={index}>{disclaimer}</li>
+          ))}
+          {BONUS_SECTION.bonuses.map((bonus, index) => (
+            <li key={index}>
+              {bonus.percentage}% bonificación en {bonus.method} ({bonus.condition})
+            </li>
+          ))}
         </ul>
-
         <p className="mb-6">
-          Para adherirte a débito automático con tarjeta de crédito o desde tu CBU, 
-          imprimí, completá y envianos una foto por WhatsApp del siguiente formulario:
+          {BONUS_SECTION.formInstructions}
         </p>
-
         <div className="flex flex-col items-center gap-4">
           <figure>
             <img 
@@ -91,12 +89,11 @@ export function MediosPagoPage() {
               className="mx-auto my-4 max-w-full h-auto"
             />
           </figure>
-          
           <Button
             variant="default" 
             size="lg" 
             onClick={printFormulario}
-            className="w-full sm:w-auto hover:scale-105 transition-transform"
+            className="w-full sm:w-auto hover:scale-105 transition-transform hover:cursor-pointer"
           >
             <Printer className="mr-2 h-5 w-5" />
             Imprimir Formulario
@@ -113,44 +110,30 @@ export function MediosPagoPage() {
               autoplay={true}
             />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-semibold">Otras opciones de pago</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold">{OTHER_PAYMENT_SECTION.title}</h2>
         </div>
-
         <ul className="list-disc list-inside space-y-3 mb-4">
-          <li>
-            Pago en efectivo en nuestro local de General Simón Bolívar 348, Piso 4, 
-            de la Ciudad de Córdoba.
-          </li>
-          <li>
-            Por transferencia bancaria a nuestra cuenta corriente en pesos:
-          </li>
+          {OTHER_PAYMENT_SECTION.options.map((option, index) => (
+            <li key={index}>{option}</li>
+          ))}
         </ul>
-
         <div className="bg-primary/5 pl-4 py-4 pr-6 rounded-r">
           <div className="border-b border-gray-400 mb-2 pb-2">
             <p className="text-sm text-gray-800">
-              <strong className="font-semibold">IMPORTANTE:</strong> Si pagás por transferencia, recordá poner en observaciones o referencia el CUIT de tu farmacia.
+              <strong className="font-semibold">IMPORTANTE:</strong> {BANK_TRANSFER_NOTE}
             </p>
           </div>
-
           <dl className="grid grid-cols-[auto_1fr] gap-x-1 gap-y-2 text-sm">
             <dt className="font-bold text-accent-blue uppercase tracking-wider">Número</dt>
-            <dd className="font-mono text-gray-800">330109408273812</dd>
-
+            <dd className="font-mono text-gray-800">{BANK_ACCOUNT.number}</dd>
             <dt className="font-bold text-accent-blue uppercase tracking-wider">CBU</dt>
-            <dd className="font-mono text-gray-800 break-all">2850301930094082738121</dd>
-
+            <dd className="font-mono text-gray-800 break-all">{BANK_ACCOUNT.cbu}</dd>
             <dt className="font-bold text-accent-blue uppercase tracking-wider">Alias</dt>
-            <dd className="font-mono">sistemagema</dd>
-
+            <dd className="font-mono">{BANK_ACCOUNT.alias}</dd>
             <dt className="font-bold text-accent-blue uppercase tracking-wider">CUIT</dt>
-            <dd className="font-mono text-gray-800">30-71041463-3</dd>
-           
+            <dd className="font-mono text-gray-800">{BANK_ACCOUNT.cuit}</dd>
           </dl>
-
         </div>
-
-
       </section>
     </article>
   );
