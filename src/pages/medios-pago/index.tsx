@@ -1,19 +1,22 @@
 import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
+import { Printer } from "lucide-react";
+import { usePrintImage } from "@/hooks";
 import siroInstrucciones from "@/assets/image-siro-instrucciones.gif";
 import siroPagoEfectivo from "@/assets/image-siro-pagoefectivo.gif";
 import siroPagoElectronico from "@/assets/image-siro-pagoelectronico.gif";
 import siroFormulario from "@/assets/image-siro-formulario.jpg";
-// import animationDanger from "@/assets/animation-danger.json";
 import animationForm from "@/assets/animation-form.json";
 import animationPayment from "@/assets/animation-payment.json";
 import animationMoney from "@/assets/animation-money.json";
 
 export function MediosPagoPage() {
+  const printFormulario = usePrintImage(siroFormulario);
+
   return (
     <article className="py-15! container-custom">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-center mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6">
           Pago de cuotas GEMA
         </h1>
         
@@ -27,7 +30,7 @@ export function MediosPagoPage() {
       </header>
 
       <section className="mb-8">
-        <div className="flex items-center text-left gap-0 sm:gap-2 mb-4">
+        <div className="flex justify-center items-center sm:justify-start gap-0 sm:gap-2 mb-4">
           <div className="hidden sm:block w-16 h-16 shrink-0">
             <Lottie 
               animationData={animationPayment}
@@ -35,7 +38,7 @@ export function MediosPagoPage() {
               autoplay={true}
             />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-semibold">Descargá tu cupón de pago</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold">Descargá tu cupón</h2>
         </div>
 
         <p className="mb-4">
@@ -58,7 +61,7 @@ export function MediosPagoPage() {
       </section>
 
       <section className="mb-8">
-        <div className="flex items-center text-left gap-0 sm:gap-2 mb-4">
+        <div className="flex justify-center items-center sm:justify-start gap-0 sm:gap-2 mb-4">
           <div className="hidden sm:block w-16 h-16 shrink-0">
             <Lottie 
               animationData={animationForm}
@@ -92,9 +95,11 @@ export function MediosPagoPage() {
           <Button
             variant="default" 
             size="lg" 
+            onClick={printFormulario}
             className="w-full sm:w-auto hover:scale-105 transition-transform"
           >
-            Descargar Formulario
+            <Printer className="mr-2 h-5 w-5" />
+            Imprimir Formulario
           </Button>
         </div>
       </section>
@@ -128,17 +133,17 @@ export function MediosPagoPage() {
             </p>
           </div>
 
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
-            <dt className="font-bold text-gray-500 uppercase tracking-wider">Número</dt>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-1 gap-y-2 text-sm">
+            <dt className="font-bold text-accent-blue uppercase tracking-wider">Número</dt>
             <dd className="font-mono text-gray-800">330109408273812</dd>
 
-            <dt className="font-bold text-gray-500 uppercase tracking-wider">CBU</dt>
+            <dt className="font-bold text-accent-blue uppercase tracking-wider">CBU</dt>
             <dd className="font-mono text-gray-800 break-all">2850301930094082738121</dd>
 
-            <dt className="font-bold text-gray-500 uppercase tracking-wider">Alias</dt>
+            <dt className="font-bold text-accent-blue uppercase tracking-wider">Alias</dt>
             <dd className="font-mono">sistemagema</dd>
 
-            <dt className="font-bold text-gray-500 uppercase tracking-wider">CUIT</dt>
+            <dt className="font-bold text-accent-blue uppercase tracking-wider">CUIT</dt>
             <dd className="font-mono text-gray-800">30-71041463-3</dd>
            
           </dl>
