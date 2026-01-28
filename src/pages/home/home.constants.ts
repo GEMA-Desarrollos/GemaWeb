@@ -1,17 +1,17 @@
 
 import type { Product, Stat, Testimonial, FeatureCardProps } from "./home.types"
-import gemaImg from "@/assets/gema.png"
-import turneroImg from "@/assets/turnero.png"
-import feComerciosImg from "@/assets/fe-comercios.png"
-import trazabilidadImg from "@/assets/trazabilidad.png"
-import puzzleAnimation from "@/assets/puzzle.json"
-import databaseAnimation from "@/assets/database.json"
-import checkAnimation from "@/assets/check.json"
-import satelliteAnimation from "@/assets/satellite.json"
+import iconSistemaGema from "@/assets/icon-sistema-gema.png"
+import iconTurnero from "@/assets/icon-turnero.png"
+import iconFeComercios from "@/assets/icon-fe-comercios.png"
+import iconTrazabilidad from "@/assets/icon-trazabilidad.png"
+import animationPuzzle from "@/assets/animation-puzzle.json"
+import animationDB from "@/assets/animation-db.json"
+import animationCheck from "@/assets/animation-check.json"
+import animationSatellite from "@/assets/animation-satellite.json"
 
 export const PRODUCTS: readonly Product[] = [
   {
-    icon: gemaImg,
+    icon: iconSistemaGema,
     title: "Sistema Gema",
     description: "Software completo para la administración de farmacias con facturación electrónica integrada.",
     features: [
@@ -22,7 +22,7 @@ export const PRODUCTS: readonly Product[] = [
     ],
   },
   {
-    icon: turneroImg,
+    icon: iconTurnero,
     title: "Turnero Gema",
     description: "Gestión eficiente de turnos independiente integrable con Gema Farmacias.",
     features: [
@@ -32,7 +32,7 @@ export const PRODUCTS: readonly Product[] = [
     ],
   },
   {
-    icon: feComerciosImg,
+    icon: iconFeComercios,
     title: "Facturación-E",
     description: "Sistema de gestión con factura electrónica para todo tipo de negocios minoristas.",
     features: [
@@ -43,7 +43,7 @@ export const PRODUCTS: readonly Product[] = [
     ],
   },
   {
-    icon: trazabilidadImg,
+    icon: iconTrazabilidad,
     title: "Trazabilidad",
     description: "Primer software homologado del país para el seguimiento integral de medicamentos.",
     features: [
@@ -60,25 +60,25 @@ export const FEATURES: readonly FeatureCardProps[] = [
     letter: "S",
     title: "Simple",
     description: "Interfaz intuitiva y fácil de usar. Reduce la curva de aprendizaje y optimiza el tiempo de capacitación.",
-    animation: checkAnimation,
+    animation: animationCheck,
   },
   {
     letter: "A",
     title: "Adaptable",
     description: "Se ajusta a las necesidades específicas de cada farmacia, sin importar su tamaño o complejidad.",
-    animation: puzzleAnimation,
+    animation: animationPuzzle,
   },
   {
     letter: "I",
     title: "Innovador",
     description: "Incorporamos tecnología de vanguardia para mantenerte competitivo en el mercado actual.",
-    animation: satelliteAnimation,
+    animation: animationSatellite,
   },
   {
     letter: "C",
     title: "Confiable",
     description: "Sistema robusto y seguro respaldado por años de experiencia y actualizaciones constantes.",
-    animation: databaseAnimation,
+    animation: animationDB,
   },
 ] as const
 

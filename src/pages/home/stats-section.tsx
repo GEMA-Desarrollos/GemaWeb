@@ -29,12 +29,12 @@ export function StatsSection() {
                   delay: 0.2 + index * 0.1,
                 }}
               >
-                <h3 className="text-5xl font-bold mb-2 flex items-center justify-center">
+                <h3 className="text-5xl font-bold mb-2 flex items-center justify-center font-sans">
                   {prefix}
                   <AnimatedNumber value={number} />
                   {suffix}
                 </h3>
-                <p className="text-lg opacity-90 font-nunito">{stat.label}</p>
+                <p className="text-lg opacity-90 font-display">{stat.label}</p>
               </motion.div>
             )
           })}

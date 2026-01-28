@@ -39,7 +39,7 @@ export function HeroSection() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-lg md:text-xl mb-10 opacity-95 leading-relaxed font-nunito text-white max-w-3xl mx-auto"
+          className="text-lg md:text-xl mb-10 opacity-95 leading-relaxed font-display text-white max-w-3xl mx-auto"
         >
           Soluciones tecnológicas innovadoras y escalables, diseñadas para
           optimizar tus procesos y acelerar el crecimiento de tu empresa.

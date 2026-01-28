@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
+@import "@fontsource-variable/nunito";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -85,6 +86,7 @@
 
 @theme inline {
     --font-sans: 'Inter Variable', sans-serif;
+    --font-display: 'Nunito Variable', sans-serif;
     
     /* Colores GEMA personalizados como utilities */
     --color-primary-blue: #3166a3;
@@ -138,24 +140,39 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
-  body {
-    @apply bg-background text-foreground;
   }
-  html {
-    font-family: "Lato", sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      @apply font-sans;
-    }
-}
-
-.font-lato {
-  font-family: "Lato", sans-serif;
-}
-
-.font-nunito {
-  font-family: "Nunito", sans-serif;
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-display font-semibold;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-display font-semibold;
+  }
+  
+  h4 {
+    @apply text-lg sm:text-xl lg:text-2xl font-display font-medium;
+  }
+  
+  h5 {
+    @apply text-base sm:text-lg lg:text-xl font-display font-medium;
+  }
+  
+  h6 {
+    @apply text-sm sm:text-base lg:text-lg font-display font-medium;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
 }
 
 .container-custom {

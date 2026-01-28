@@ -11,7 +11,7 @@ export function TestimonialCard({ name, role, company, comment, rating }: Testim
             <StarIcon key={i} className="size-5 fill-yellow-400 text-yellow-400" />
           ))}
         </div>
-        <p className="text-muted-foreground leading-relaxed mb-6 italic font-nunito select-none">
+        <p className="text-muted-foreground leading-relaxed mb-6 italic font-display select-none">
           "{comment}"
         </p>
         <div className="border-t pt-4 flex justify-end select-none">

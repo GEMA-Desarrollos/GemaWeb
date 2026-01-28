@@ -15,7 +15,7 @@ export function Footer({ className }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Columna 1: Sobre nosotros */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 inline-block">
+            <h3 className="text-lg font-semibold border-b-2 border-gray-400 pb-2 inline-block">
               {ABOUT_INFO.title}
             </h3>
             <p className="text-white/80 text-sm leading-relaxed">
@@ -25,7 +25,7 @@ export function Footer({ className }: FooterProps) {
 
           {/* Columna 2: Redes Sociales */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 inline-block">
+            <h3 className="text-lg font-semibold border-b-2 border-gray-400 pb-2 inline-block">
               Redes Sociales
             </h3>
             <div className="flex gap-3">
@@ -34,7 +34,7 @@ export function Footer({ className }: FooterProps) {
                 return (
                   <a
                     key={social.name}
-                    href={social.href}
+                    href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
@@ -54,7 +54,7 @@ export function Footer({ className }: FooterProps) {
 
           {/* Columna 3: Contacto */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold border-b-2 border-primary pb-2 inline-block">
+            <h3 className="text-lg font-semibold border-b-2 border-gray-400 pb-2 inline-block">
               {CONTACT_INFO.title}
             </h3>
             <div className="space-y-3 text-sm">

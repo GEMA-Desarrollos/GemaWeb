@@ -7,13 +7,13 @@ import { ContactSection } from "./contact-section";
 
 export function HomePage() {
   return (
-    <div className="pt-16">
+    <>
       <HeroSection />
       <ProductsSection />
       <StatsSection />
       <FeaturesSection />
       <TestimonialsSection />
       <ContactSection />
-    </div>
+    </>
   );
 }

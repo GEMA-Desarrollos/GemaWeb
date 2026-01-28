@@ -1,11 +1,11 @@
 export interface NavDropdownItem {
-  href: string
+  link: string
   label: string
 }
 
 export interface NavMenuItem {
   label: string
-  href?: string
+  link?: string
   items?: readonly NavDropdownItem[]
 }
 

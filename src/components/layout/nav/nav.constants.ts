@@ -1,11 +1,11 @@
 export interface NavDropdownItem {
-  href: string
+  link: string
   label: string
 }
 
 export interface NavMenuItem {
   label: string
-  href?: string // Para items sin dropdown
+  link?: string // Para items sin dropdown
   items?: readonly NavDropdownItem[] // Para items con dropdown
 }
 
@@ -13,36 +13,36 @@ export const NAV_MENU_ITEMS: readonly NavMenuItem[] = [
   {
     label: "Empresa",
     items: [
-      { href: "/quienes-somos", label: "Quiénes Somos" },
-      { href: "/contacto", label: "Contacto" },
+      { link: "/quienes-somos", label: "Quiénes Somos" },
+      { link: "/contacto", label: "Contacto" },
     ],
   },
   {
     label: "Servicios",
     items: [
-      { href: "/solicitar-demo", label: "Solicitar Demo" },
-      { href: "/sucursales", label: "Sucursales" },
-      { href: "/validador-os", label: "Validador OS" },
+      { link: "/solicitar-demo", label: "Solicitar Demo" },
+      { link: "/sucursales", label: "Sucursales" },
+      { link: "/validador-os", label: "Validador OS" },
     ],
   },
   {
     label: "Soporte",
     items: [
-      { href: "/soporte-tecnico", label: "Soporte Técnico" },
-      { href: "/descargas", label: "Descargas" },
+      { link: "/soporte-tecnico", label: "Soporte Técnico" },
+      { link: "/descargas", label: "Descargas" },
     ],
   },
   {
     label: "Medios de Pago",
-    href: "/medios-pago",
+    link: "/medios-pago",
   },
 ] as const
 
 export const FOOTER_LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/medios-pago", label: "Medios de pago" },
-  { href: "/quienes-somos", label: "Quiénes Somos" },
-  { href: "/descargas", label: "Descargas" },
-  { href: "/soporte-tecnico", label: "Soporte Técnico" },
-  { href: "/contacto", label: "Contacto" },
+  { link: "/", label: "Inicio" },
+  { link: "/medios-pago", label: "Medios de pago" },
+  { link: "/quienes-somos", label: "Quiénes Somos" },
+  { link: "/descargas", label: "Descargas" },
+  { link: "/soporte-tecnico", label: "Soporte Técnico" },
+  { link: "/contacto", label: "Contacto" },
 ] as const
