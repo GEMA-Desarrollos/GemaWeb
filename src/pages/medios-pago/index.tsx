@@ -14,11 +14,11 @@ export function MediosPagoPage() {
     <article className="py-15! container-custom">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center mb-6">
-          Guía de pago de sistema GEMA
+          Pago de cuotas GEMA
         </h1>
         
         <figure className="my-6">
-          <img 
+          <img
             src={siroInstrucciones} 
             alt="Instrucciones de pago Gema Roel Asiro" 
             className="mx-auto max-w-full h-auto"
@@ -28,7 +28,7 @@ export function MediosPagoPage() {
 
       <section className="mb-8">
         <div className="flex items-center text-left gap-0 sm:gap-2 mb-4">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0">
+          <div className="hidden sm:block w-16 h-16 shrink-0">
             <Lottie 
               animationData={animationPayment}
               loop={true}
@@ -59,7 +59,7 @@ export function MediosPagoPage() {
 
       <section className="mb-8">
         <div className="flex items-center text-left gap-0 sm:gap-2 mb-4">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0">
+          <div className="hidden sm:block w-16 h-16 shrink-0">
             <Lottie 
               animationData={animationForm}
               loop={true}
@@ -100,15 +100,8 @@ export function MediosPagoPage() {
       </section>
 
       <section>
-        {/* className="border-t border-gray-300" */}
-
-        {/* <h2 className="text-2xl font-semibold mb-4">
-          Además Podés Seguir Abonando de las Maneras Habituales
-        </h2>
-         */}
-
         <div className="flex justify-center items-center sm:justify-start gap-0 sm:gap-2 mb-4">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0">
+          <div className="hidden sm:block w-16 h-16 shrink-0">
             <Lottie 
               animationData={animationMoney}
               loop={true}
@@ -131,7 +124,7 @@ export function MediosPagoPage() {
         <div className="bg-primary/5 pl-4 py-4 pr-6 rounded-r">
           <div className="border-b border-gray-400 mb-2 pb-2">
             <p className="text-sm text-gray-800">
-              <strong className="font-semibold">IMPORTANTE:</strong> Si pagás por transferencia bancaria, recordá poner en observaciones o referencia el número de CUIT de tu farmacia.
+              <strong className="font-semibold">IMPORTANTE:</strong> Si pagás por transferencia, recordá poner en observaciones o referencia el CUIT de tu farmacia.
             </p>
           </div>
 
