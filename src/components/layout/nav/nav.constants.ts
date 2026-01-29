@@ -21,8 +21,8 @@ export const NAV_MENU_ITEMS: readonly NavMenuItem[] = [
     label: "Servicios",
     items: [
       { link: "/solicitar-demo", label: "Solicitar Demo" },
-      { link: "/sucursales", label: "Sucursales" },
-      { link: "/validador-os", label: "Validador OS" },
+      { link: "https://sistemagema.com.ar/sucursales/iniciarsesion.asp", label: "Sucursales" },
+      { link: "https://sistemagema.com.ar/inicio.aspx", label: "Validador OS" },
     ],
   },
   {

@@ -1,37 +1,46 @@
 import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
-import { Printer } from "lucide-react";
+import { Printer, CheckIcon } from "lucide-react";
 import { usePrintImage } from "@/hooks";
 import siroInstrucciones from "@/assets/image-siro-instrucciones.gif";
 import siroPagoEfectivo from "@/assets/image-siro-pagoefectivo.gif";
 import siroPagoElectronico from "@/assets/image-siro-pagoelectronico.gif";
 import siroFormulario from "@/assets/image-siro-formulario.jpg";
-import animationForm from "@/assets/animation-form.json";
 import animationPayment from "@/assets/animation-payment.json";
 import animationMoney from "@/assets/animation-money.json";
-import { PAGE_TITLE, CUPON_SECTION, BONUS_SECTION, OTHER_PAYMENT_SECTION, BANK_ACCOUNT, BANK_TRANSFER_NOTE, } from "./medios-pago.constants";
+import { HEADER_CONFIG, CUPON_SECTION, BONUS_SECTION, OTHER_PAYMENT_SECTION, BANK_ACCOUNT, BANK_TRANSFER_NOTE, } from "./medios-pago.constants";
 
 export function MediosPagoPage() {
   const printFormulario = usePrintImage(siroFormulario);
 
   return (
     <article className="py-15! container-custom">
-      <header className="mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-          {PAGE_TITLE}
-        </h1>
-        <figure className="my-6">
+      <header>
+        <div className="container mx-auto px-4 py-2 sm:py-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
+              {HEADER_CONFIG.title}
+            </h1>
+            <p className="text-xl sm:text-2xl mb-6">
+              {HEADER_CONFIG.subtitle}
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section className="py-5">
+        <figure>
           <img
             src={siroInstrucciones} 
             alt="Instrucciones de pago Gema Roel Asiro" 
-            className="mx-auto max-w-full h-auto"
+            className="mx-auto max-w-full sm:max-w-[80%] h-auto"
           />
         </figure>
-      </header>
+      </section>
 
-      <section className="mb-8">
-        <div className="flex justify-center items-center sm:justify-start gap-0 sm:gap-2 mb-4">
-          <div className="hidden sm:block w-16 h-16 shrink-0">
+      <section className="py-4">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <div className="hidden sm:block w-12 h-12 lg:w-14 lg:h-14 shrink-0">
             <Lottie 
               animationData={animationPayment}
               loop={true}
@@ -40,10 +49,10 @@ export function MediosPagoPage() {
           </div>
           <h2 className="text-2xl sm:text-3xl font-semibold">{CUPON_SECTION.title}</h2>
         </div>
-        <p className="mb-4">
+        <p className="mb-6 text-center">
           {CUPON_SECTION.description}
         </p>
-        <div className="flex flex-wrap items-center gap-4 justify-center my-6">
+        <div className="flex flex-wrap items-center gap-4 justify-center my-4">
           <img 
             src={siroPagoEfectivo} 
             alt="Opciones de pago en efectivo" 
@@ -57,38 +66,30 @@ export function MediosPagoPage() {
         </div>
       </section>
 
-      <section className="mb-8">
-        <div className="flex justify-center items-center sm:justify-start gap-0 sm:gap-2 mb-4">
-          <div className="hidden sm:block w-16 h-16 shrink-0">
-            <Lottie 
-              animationData={animationForm}
-              loop={true}
-              autoplay={true}
-            />
-          </div>
+      <section className="py-4">
+        <div className="flex justify-center items-center gap-0 sm:gap-2 mb-4">
           <h2 className="text-2xl sm:text-3xl font-semibold">{BONUS_SECTION.title}</h2>
         </div>
-        <ul className="list-disc list-inside space-y-2 mb-4">
+        <ul className="space-y-2 mb-4 sm:ml-8 md:ml-10">
           {BONUS_SECTION.disclaimers.map((disclaimer, index) => (
-            <li key={index}>{disclaimer}</li>
+            <li key={index} className="flex items-start gap-2">
+              <CheckIcon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <span>{disclaimer}</span>
+            </li>
           ))}
           {BONUS_SECTION.bonuses.map((bonus, index) => (
-            <li key={index}>
+            <li key={index} className="flex items-start gap-2">
+              <CheckIcon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <span>
               {bonus.percentage}% bonificación en {bonus.method} ({bonus.condition})
+              </span>
             </li>
           ))}
         </ul>
-        <p className="mb-6">
+        <p className="sm:ml-8 md:ml-10 mb-6">
           {BONUS_SECTION.formInstructions}
         </p>
-        <div className="flex flex-col items-center gap-4">
-          <figure>
-            <img 
-              src={siroFormulario} 
-              alt="Formulario de adhesión a débito automático" 
-              className="mx-auto my-4 max-w-full h-auto"
-            />
-          </figure>
+        <div className="flex flex-col items-center">
           <Button
             variant="default" 
             size="lg" 
@@ -101,7 +102,7 @@ export function MediosPagoPage() {
         </div>
       </section>
 
-      <section>
+      <section className="py-4">
         <div className="flex justify-center items-center sm:justify-start gap-0 sm:gap-2 mb-4">
           <div className="hidden sm:block w-16 h-16 shrink-0">
             <Lottie 

@@ -11,42 +11,36 @@ export const SOCIAL_LINKS = [
     link: "https://x.com/sistemagema",
     icon: XIcon,
     bgColor: "bg-gradient-to-tr from-[#000000] to-[#434343]",
-    hoverColor: "hover:from-[#000000]/80 hover:to-[#434343]/80"
   },
   {
     name: "Facebook",
     link: "https://www.facebook.com/sistemagema",
     icon: FacebookIcon,
-    bgColor: "bg-gradient-to-tr from-[#1877F2] to-[#3b5998]",
-    hoverColor: "hover:from-[#1877F2]/80 hover:to-[#3b5998]/80"
+    bgColor: "bg-[#558ccc]",
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/sistemagema",
     icon: InstagramIcon,
     bgColor: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
-    hoverColor: "hover:from-[#F58529]/80 hover:via-[#DD2A7B]/80 hover:to-[#8134AF]/80"
   },
   {
     name: "YouTube",
     link: "https://www.youtube.com/@sistemagema",
     icon: YoutubeIcon,
-    bgColor: "bg-gradient-to-tr from-[#FF0000] to-[#800000]",
-    hoverColor: "hover:from-[#FF0000]/80 hover:to-[#800000]/80"
+    bgColor: "bg-[#dc2626]",
   },
   {
     name: "WhatsApp",
     link: "https://wa.me/5493518084771",
     icon: WhatsappIcon,
-    bgColor: "bg-gradient-to-tr from-[#25D366] to-[#1a9247]/80",
-    hoverColor: "hover:from-[#25D366]/80 hover:to-[#1a9247]/80"
+    bgColor: "bg-[#16a34a]",
   },
   // {
   //   name: "LinkedIn",
   //   link: "https://linkedin.com",
   //   icon: LinkedinIcon,
   //   bgColor: "bg-gradient-to-tr from-[#0A66C2] to-[#004182]",
-  //   hoverColor: "hover:from-[#0A66C2]/80 hover:to-[#004182]/80"
   // }
 ] as const
 

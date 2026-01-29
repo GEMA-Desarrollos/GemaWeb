@@ -40,7 +40,6 @@ export function Footer({ className }: FooterProps) {
                     className={cn(
                       "w-10 h-10 flex items-center justify-center",
                       social.bgColor,
-                      social.hoverColor,
                       "hover:scale-110 hover:rounded transition-all duration-200"
                     )}
                     aria-label={social.name}
