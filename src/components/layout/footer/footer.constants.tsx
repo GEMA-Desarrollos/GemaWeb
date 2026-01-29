@@ -36,12 +36,6 @@ export const SOCIAL_LINKS = [
     icon: WhatsappIcon,
     bgColor: "bg-[#16a34a]",
   },
-  // {
-  //   name: "LinkedIn",
-  //   link: "https://linkedin.com",
-  //   icon: LinkedinIcon,
-  //   bgColor: "bg-gradient-to-tr from-[#0A66C2] to-[#004182]",
-  // }
 ] as const
 
 export const CONTACT_INFO = {

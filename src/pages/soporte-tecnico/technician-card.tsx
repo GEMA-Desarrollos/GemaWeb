@@ -6,7 +6,7 @@ import type { TechnicianCardProps } from "./support.types";
 
 export function TechnicianCard({ technician }: TechnicianCardProps) {
   return (
-    <Card className="group relative overflow-hidden bg-white hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out animate-fadeInUp py-0">
+    <Card className="group relative overflow-hidden bg-white hover:shadow-xl transition-all duration-300 ease-out animate-fadeInUp py-0">
       <div className="p-6">
         <div className="mb-3">
           <h3 className="text-lg font-bold text-gray-900 mb-1">
