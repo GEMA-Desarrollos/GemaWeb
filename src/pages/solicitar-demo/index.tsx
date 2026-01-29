@@ -36,7 +36,8 @@ export function SolicitarDemoPage() {
       recaptcha: "",
     },
   })
-  const recaptchaKey = import.meta.env.RECAPTCHA_SITE_KEY;
+  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+  console.log(recaptchaKey)
 
   const onSubmit = async (data: RequestDemoFormData) => {
     setSubmitStatus("idle")
