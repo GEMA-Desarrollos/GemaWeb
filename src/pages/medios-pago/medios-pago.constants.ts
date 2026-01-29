@@ -1,7 +1,5 @@
 import type { BankAccountInfo, BonusInfo } from "./medios-pago.types"
 
-// export const PAGE_TITLE = "Pago de cuotas GEMA" as const
-
 export const HEADER_CONFIG = {
   title: "Pago de cuotas",
   subtitle: "Conocé todas las formas de pago disponibles para abonar tu suscripción mensual de sistema GEMA de forma rápida y segura."

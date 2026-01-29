@@ -178,3 +178,9 @@
 .container-custom {
   @apply max-w-300 mx-auto py-0 px-8;
 }
+
+/* Prevent scroll lock from hiding the scrollbar */
+html body[data-scroll-locked] {
+  overflow-y: scroll !important;
+  margin-right: 0 !important;
+}

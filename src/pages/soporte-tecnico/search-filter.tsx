@@ -53,27 +53,6 @@ export function SearchFilter({
           </div>
         </div>
       </div>
-
-      {/* Results Counter */}
-      {/* <div className={`hidden mt-4 pt-4 border-t border-gray-100 ${resultsCount === 0 ? "hidden" : "block"}`}>
-        <p className="text-sm text-gray-600">
-          {resultsCount > 0 &&  (
-            <>
-              Mostrando{" "}
-              <span className="font-bold text-blue-600">{resultsCount}</span>{" "}
-              {resultsCount === 1 ? "técnico" : "técnicos"}
-              {(searchTerm || selectedLocation) && (
-                <span className="text-gray-500">
-                  {" "}
-                  {searchTerm && `para "${searchTerm}"`}
-                  {searchTerm && selectedLocation && " en "}
-                  {selectedLocation && `${selectedLocation}`}
-                </span>
-              )}
-            </>
-          )}
-        </p>
-      </div> */}
     </div>
   )
 }

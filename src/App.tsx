@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/footer"
 import { HomePage } from "@/pages/home"
 import { MediosPagoPage } from "@/pages/medios-pago"
 import { SoporteTecnicoPage } from "./pages/soporte-tecnico"
+import { SolicitarDemoPage } from "./pages/solicitar-demo"
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/medios-pago" element={<MediosPagoPage />} />
             <Route path="/soporte-tecnico" element={<SoporteTecnicoPage />} />
+            <Route path="/solicitar-demo" element={<SolicitarDemoPage />} />
           </Routes>
         </main>
         <Footer />
