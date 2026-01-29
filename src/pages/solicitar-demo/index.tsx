@@ -36,6 +36,7 @@ export function SolicitarDemoPage() {
       recaptcha: "",
     },
   })
+  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
   const onSubmit = async (data: RequestDemoFormData) => {
     setSubmitStatus("idle")
@@ -274,7 +275,7 @@ export function SolicitarDemoPage() {
                   <div className="flex justify-center">
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || ""}
+                      sitekey={recaptchaKey || ""}
                       onChange={handleRecaptchaChange}
                       onExpired={() => setValue("recaptcha", "")}
                       onErrored={() => setValue("recaptcha", "")}
