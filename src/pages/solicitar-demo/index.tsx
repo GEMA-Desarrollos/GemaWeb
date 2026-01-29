@@ -51,7 +51,6 @@ export function SolicitarDemoPage() {
       // await new Promise((resolve) => setTimeout(resolve, 2000))
       
       setSubmitStatus("success")
-      
       // Resetear reCAPTCHA
       recaptchaRef.current?.reset()
       
