@@ -32,7 +32,7 @@ export function SearchFilter({
             onChange={(e) => onLocationChange(e.target.value)}
             className="w-full h-12 pl-10 pr-10 text-base rounded-md border border-input bg-background text-foreground appearance-none cursor-pointer hover:bg-accent/5 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-colors"
           >
-            <option value="">Todas las ubicaciones</option>
+            <option value="">Todas</option>
             {locations.map(location => (
               <option key={location} value={location}>
                 {location}

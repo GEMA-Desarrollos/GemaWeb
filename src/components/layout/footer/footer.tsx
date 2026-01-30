@@ -56,10 +56,10 @@ export function Footer({ className }: FooterProps) {
             <h3 className="text-lg font-semibold border-b-2 border-gray-400 pb-2 inline-block">
               {CONTACT_INFO.title}
             </h3>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-sm!">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <p className="text-white/80">
+                <p className="text-white/80 text-sm">
                   {CONTACT_INFO.address}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export function Footer({ className }: FooterProps) {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0" />
-                <p className="text-white/80">
+                <p className="text-white/80 text-sm">
                   {CONTACT_INFO.phones}
                 </p>
               </div>
@@ -82,7 +82,7 @@ export function Footer({ className }: FooterProps) {
                 <Clock className="w-4 h-4 mt-0.5 shrink-0" />
                 <div className="text-white/80">
                   {CONTACT_INFO.schedule.map((line, index) => (
-                    <p key={index}>{line}</p>
+                    <p key={index} className="text-sm">{line}</p>
                   ))}
                 </div>
               </div>
