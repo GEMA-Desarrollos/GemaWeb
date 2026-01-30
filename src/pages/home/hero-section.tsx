@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import {Button} from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative py-24 px-0 sm:px-8 text-center overflow-hidden min-h-60 md:min-h-75">
       <video
@@ -44,9 +48,18 @@ export function HeroSection() {
           Soluciones tecnológicas innovadoras y escalables, diseñadas para
           optimizar tus procesos y acelerar el crecimiento de tu empresa.
         </motion.p>
-        <button className="bg-white hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-all hover:scale-105 mx-auto">
+        {/* <button className="bg-white hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-all hover:scale-105 mx-auto">
           Solicitar Información
-        </button>
+        </button> */}
+        <Button
+          size="lg"
+          className="bg-white hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-all hover:scale-105 mx-auto"
+          variant="outline"
+          onClick={() => navigate("/solicitar-demo")}
+        >
+          Solicitar Información
+        </Button>
+
       </div>
     </section>
   );
