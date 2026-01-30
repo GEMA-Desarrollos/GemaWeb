@@ -1,5 +1,6 @@
 import { z } from "zod"
 
+// Esquema de validación para el formulario de solicitud de demo
 export const requestDemoSchema = z.object({
   farmacia: z
     .string()
@@ -57,15 +58,5 @@ export const requestDemoSchema = z.object({
   path: ["horarioHasta"],
 })
 
+// Tipo inferido de Zod - también disponible en request-demo.types.ts
 export type RequestDemoFormData = z.infer<typeof requestDemoSchema>
-
-// Tipo para el payload que se envía a la API
-export interface DemoRequestPayload {
-  farmacia: string
-  cuit: string
-  telefono: string
-  email: string
-  horarioContacto: string
-  nombreContacto: string
-  observaciones?: string
-}

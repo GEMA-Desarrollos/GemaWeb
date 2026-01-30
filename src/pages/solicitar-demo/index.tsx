@@ -1,9 +1,8 @@
-import { useState, useRef } from "react"
-import { useForm, Controller } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
+import { Controller } from "react-hook-form"
 // import ReCAPTCHA from "react-google-recaptcha"
-import { HEADER_CONFIG, FORM_CONFIG, API_CONFIG } from "./request-demo.constants"
-import { requestDemoSchema, type RequestDemoFormData, type DemoRequestPayload } from "./request-demo.schema"
+import { HEADER_CONFIG, FORM_CONFIG } from "./request-demo.constants"
+import { useRequestDemoForm } from "./request-demo.hooks"
+// import { useRecaptcha } from "./use-recaptcha.hooks"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea/textarea"
@@ -14,88 +13,19 @@ import { WhatsappIcon } from "@/components/shared/icons"
 
 
 export function SolicitarDemoPage() {
-  const [submitStatus, setSubmitStatus] = useState<string>("")
-  // const recaptchaRef = useRef<ReCAPTCHA>(null)
-  const { register, control, handleSubmit, setValue, formState: { errors, isSubmitting }, reset, } = useForm<RequestDemoFormData>({ resolver: zodResolver(requestDemoSchema), defaultValues: { farmacia: "",
-    cuit: "",
-    telefono: "",
-    email: "",
-    horarioDesde: "",
-    horarioHasta: "",
-    nombreContacto: "",
-    observacion: "",
-    // recaptcha: "",
-  }, })
-  // const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
+  const {
+    form: { register, control, handleSubmit, formState: { errors, isSubmitting } },
+    submitStatus,
+    handleCuitChange,
+    handleTelefonoChange,
+    onSubmit,
+  } = useRequestDemoForm()
 
-  // Función para filtrar solo números
-  const filterOnlyNumbers = (value: string): string => {
-    return value.replace(/[^0-9]/g, "")
-  }
-
-  // Handler para CUIT - solo números
-  const handleCuitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const filtered = filterOnlyNumbers(e.target.value)
-    setValue("cuit", filtered, { shouldValidate: true })
-  }
-
-  // Handler para teléfono - solo números
-  const handleTelefonoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const filtered = filterOnlyNumbers(e.target.value)
-    setValue("telefono", filtered, { shouldValidate: true })
-  }
-
-  const onSubmit = async (data: RequestDemoFormData) => {
-    setSubmitStatus("")
-
-    try {
-      // consumir la API
-      const response = await fetch(`${API_CONFIG.baseUrl}/Demo`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          farmacia: data.farmacia,
-          cuit: data.cuit,
-          telefono: data.telefono,
-          email: data.email,
-          horarioContacto: `${data.horarioDesde} - ${data.horarioHasta}`,
-          nombreContacto: data.nombreContacto,
-          observaciones: data.observacion || "",
-        } as DemoRequestPayload),
-      } as RequestInit)
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const resultLink: string = await response.text()
-
-      // Redirigir a WhatsApp después de 1.5 segundos
-      setTimeout(() => {
-        window.open(resultLink, "_blank")
-        reset()
-        setSubmitStatus("")
-      }, 1500)
-    } catch (error) {
-      console.error("Error al enviar formulario:", error)
-      setSubmitStatus("error")
-      // // Resetear reCAPTCHA en caso de error
-      // recaptchaRef.current?.reset()
-      
-      // Limpiar mensaje de error después de 5 segundos
-      setTimeout(() => {
-        setSubmitStatus("")
-      }, 5000)
-    }
-  }
-
-  // const handleRecaptchaChange = (token: string | null) => {
-  //   setValue("recaptcha", token || "", { 
-  //     shouldValidate: true 
-  //   })
-  // }
+  /*
+  // Pendiente activar reCAPTCHA, descomenta:
+  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
+  const { recaptchaRef, handleRecaptchaChange, resetRecaptcha } = useRecaptcha({ setValue: form.setValue, onTokenChange: (token) => { console.log("reCAPTCHA token:", token ? "✓" : "✗") } })
+  */
 
   return (
     <article className="py-15! container-custom">

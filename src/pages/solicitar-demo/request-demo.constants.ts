@@ -1,8 +1,10 @@
+// Configuración del header de la página de solicitud de demo
 export const HEADER_CONFIG = {
   title: "Solicitá tu demo",
   subtitle: "Completá el formulario para solicitar una demostración personalizada del sistema GEMA y conocer todas sus funcionalidades."
 }
 
+// Configuración del formulario de solicitud de demo
 export const FORM_CONFIG = {
   fields: {
     farmacia: {
@@ -49,13 +51,5 @@ export const FORM_CONFIG = {
   messages: {
     success: "¡Solicitud procesada! Redirigiendo a WhatsApp...",
     error: "Ocurrió un error al procesar la solicitud. Por favor, intentá nuevamente.",
-  }
-}
-
-// URL de la API - ahora usa el proxy de Vite
-export const API_CONFIG = {
-  baseUrl: "/api",
-  endpoints: {
-    requestDemo: "/Demo",
   }
 }
