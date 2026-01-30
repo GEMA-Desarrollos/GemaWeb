@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { FloatingWhatsappButton } from "@/components/shared"
 import { HomePage } from "@/pages/home"
 import { MediosPagoPage } from "@/pages/medios-pago"
 import { SoporteTecnicoPage } from "./pages/soporte-tecnico"
@@ -20,6 +21,7 @@ export function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingWhatsappButton />
       </div>
     </BrowserRouter>
   )
