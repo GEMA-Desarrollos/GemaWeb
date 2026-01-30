@@ -11,11 +11,11 @@ export const FORM_CONFIG = {
     },
     cuit: {
       label: "CUIT",
-      placeholder: "20-12345678-9",
+      placeholder: "20123456789 (solo números)",
     },
     telefono: {
       label: "Teléfono",
-      placeholder: "+54 9 11 1234-5678",
+      placeholder: "3511234567 (solo números)",
     },
     email: {
       label: "Email",
@@ -43,11 +43,19 @@ export const FORM_CONFIG = {
     "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
   ],
   buttons: {
-    submit: "Enviar solicitud",
+    submit: "Enviar solicitud por WhatsApp",
     submitting: "Enviando...",
   },
   messages: {
-    success: "¡Solicitud enviada exitosamente! Nos pondremos en contacto a la brevedad.",
-    error: "Ocurrió un error al enviar la solicitud. Por favor, intentá nuevamente.",
+    success: "¡Solicitud procesada! Redirigiendo a WhatsApp...",
+    error: "Ocurrió un error al procesar la solicitud. Por favor, intentá nuevamente.",
+  }
+}
+
+// URL de la API - ajustar según tu backend
+export const API_CONFIG = {
+  baseUrl: import.meta.env.VITE_API_BASE_URL || "http://localhost:3000",
+  endpoints: {
+    requestDemo: "/Demo",
   }
 }

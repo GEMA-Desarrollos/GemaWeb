@@ -1,77 +1,101 @@
 import { useState, useRef } from "react"
 import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import ReCAPTCHA from "react-google-recaptcha"
-import { HEADER_CONFIG, FORM_CONFIG } from "./request-demo.constants"
-import { requestDemoSchema, type RequestDemoFormData } from "./request-demo.schema"
+// import ReCAPTCHA from "react-google-recaptcha"
+import { HEADER_CONFIG, FORM_CONFIG, API_CONFIG } from "./request-demo.constants"
+import { requestDemoSchema, type RequestDemoFormData, type DemoRequestPayload } from "./request-demo.schema"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Field, FieldLabel, FieldError } from "@/components/ui/field"
 import { Card, CardContent } from "@/components/ui/card"
+import { WhatsappIcon } from "@/components/shared/icons"
 
 
 export function SolicitarDemoPage() {
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
-  const recaptchaRef = useRef<ReCAPTCHA>(null)
-  const {
-    register,
-    control,
-    handleSubmit,
-    setValue,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<RequestDemoFormData>({
-    resolver: zodResolver(requestDemoSchema),
-    defaultValues: {
-      farmacia: "",
-      cuit: "",
-      telefono: "",
-      email: "",
-      horarioDesde: "",
-      horarioHasta: "",
-      nombreContacto: "",
-      observacion: "",
-      recaptcha: "",
-    },
-  })
-  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-  console.log(recaptchaKey)
+  const [submitStatus, setSubmitStatus] = useState<string>("")
+  // const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const { register, control, handleSubmit, setValue, formState: { errors, isSubmitting }, reset, } = useForm<RequestDemoFormData>({ resolver: zodResolver(requestDemoSchema), defaultValues: { farmacia: "",
+    cuit: "",
+    telefono: "",
+    email: "",
+    horarioDesde: "",
+    horarioHasta: "",
+    nombreContacto: "",
+    observacion: "",
+    // recaptcha: "",
+  }, })
+  // const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
+
+  // Función para filtrar solo números
+  const filterOnlyNumbers = (value: string): string => {
+    return value.replace(/[^0-9]/g, "")
+  }
+
+  // Handler para CUIT - solo números
+  const handleCuitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const filtered = filterOnlyNumbers(e.target.value)
+    setValue("cuit", filtered, { shouldValidate: true })
+  }
+
+  // Handler para teléfono - solo números
+  const handleTelefonoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const filtered = filterOnlyNumbers(e.target.value)
+    setValue("telefono", filtered, { shouldValidate: true })
+  }
 
   const onSubmit = async (data: RequestDemoFormData) => {
-    setSubmitStatus("idle")
+    setSubmitStatus("")
 
     try {
-      // TODO: Aquí irá la lógica para enviar el email a soporte
-      console.log("Datos del formulario:", data)
-      console.log("reCAPTCHA token:", data.recaptcha)
-      
-      // Simulación de envío
-      // await new Promise((resolve) => setTimeout(resolve, 2000))
-      
-      setSubmitStatus("success")
-      // Resetear reCAPTCHA
-      recaptchaRef.current?.reset()
-      
-      // Limpiar formulario después de 3 segundos
+      // consumir la API
+      const response = await fetch(`${API_CONFIG.baseUrl}/Demo`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          farmacia: data.farmacia,
+          cuit: data.cuit,
+          telefono: data.telefono,
+          email: data.email,
+          horarioContacto: `${data.horarioDesde} - ${data.horarioHasta}`,
+          nombreContacto: data.nombreContacto,
+          observaciones: data.observacion || "",
+        } as DemoRequestPayload),
+      } as RequestInit)
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const resultLink: string = await response.text()
+
+      // Redirigir a WhatsApp después de 1.5 segundos
       setTimeout(() => {
+        window.open(resultLink, "_blank")
         reset()
-        setSubmitStatus("idle")
-      }, 3000)
+        setSubmitStatus("")
+      }, 1500)
     } catch (error) {
       console.error("Error al enviar formulario:", error)
       setSubmitStatus("error")
-      // Resetear reCAPTCHA en caso de error
-      recaptchaRef.current?.reset()
+      // // Resetear reCAPTCHA en caso de error
+      // recaptchaRef.current?.reset()
+      
+      // Limpiar mensaje de error después de 5 segundos
+      setTimeout(() => {
+        setSubmitStatus("")
+      }, 5000)
     }
   }
 
-  const handleRecaptchaChange = (token: string | null) => {
-    setValue("recaptcha", token || "", { 
-      shouldValidate: true 
-    })
-  }
+  // const handleRecaptchaChange = (token: string | null) => {
+  //   setValue("recaptcha", token || "", { 
+  //     shouldValidate: true 
+  //   })
+  // }
 
   return (
     <article className="py-15! container-custom">
@@ -92,7 +116,7 @@ export function SolicitarDemoPage() {
         <div className="max-w-3xl mx-auto">
           <Card>
             <CardContent className="pt-6">
-              <form onSubmit={() => { handleSubmit(onSubmit) }} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <Field>
                   <FieldLabel htmlFor="farmacia">
                     {FORM_CONFIG.fields.farmacia.label}
@@ -104,6 +128,7 @@ export function SolicitarDemoPage() {
                     placeholder={FORM_CONFIG.fields.farmacia.placeholder}
                     aria-invalid={!!errors.farmacia}
                     disabled={isSubmitting}
+                    maxLength={20}
                     {...register("farmacia")}
                   />
                   {errors.farmacia && (
@@ -119,10 +144,13 @@ export function SolicitarDemoPage() {
                   <Input
                     id="cuit"
                     type="text"
+                    inputMode="numeric"
                     placeholder={FORM_CONFIG.fields.cuit.placeholder}
                     aria-invalid={!!errors.cuit}
                     disabled={isSubmitting}
                     {...register("cuit")}
+                    onChange={handleCuitChange}
+                    maxLength={11}
                   />
                   {errors.cuit && (
                     <FieldError errors={[{ message: errors.cuit.message }]} />
@@ -138,10 +166,13 @@ export function SolicitarDemoPage() {
                     <Input
                       id="telefono"
                       type="tel"
+                      inputMode="numeric"
                       placeholder={FORM_CONFIG.fields.telefono.placeholder}
                       aria-invalid={!!errors.telefono}
                       disabled={isSubmitting}
                       {...register("telefono")}
+                      onChange={handleTelefonoChange}
+                      maxLength={15}
                     />
                     {errors.telefono && (
                       <FieldError errors={[{ message: errors.telefono.message }]} />
@@ -159,6 +190,7 @@ export function SolicitarDemoPage() {
                       placeholder={FORM_CONFIG.fields.email.placeholder}
                       aria-invalid={!!errors.email}
                       disabled={isSubmitting}
+                      maxLength={50}
                       {...register("email")}
                     />
                     {errors.email && (
@@ -251,6 +283,7 @@ export function SolicitarDemoPage() {
                     placeholder={FORM_CONFIG.fields.nombreContacto.placeholder}
                     aria-invalid={!!errors.nombreContacto}
                     disabled={isSubmitting}
+                    maxLength={50}
                     {...register("nombreContacto")}
                   />
                   {errors.nombreContacto && (
@@ -267,11 +300,12 @@ export function SolicitarDemoPage() {
                     placeholder={FORM_CONFIG.fields.observacion.placeholder}
                     rows={4}
                     disabled={isSubmitting}
+                    maxLength={100}
                     {...register("observacion")}
                   />
                 </Field>
 
-                <Field>
+                {/* <Field>
                   <div className="flex justify-center">
                     <ReCAPTCHA
                       ref={recaptchaRef}
@@ -284,7 +318,7 @@ export function SolicitarDemoPage() {
                   {errors.recaptcha && (
                     <FieldError errors={[{ message: errors.recaptcha.message }]} />
                   )}
-                </Field>
+                </Field> */}
 
                 {submitStatus === "success" && (
                   <div 
@@ -313,8 +347,9 @@ export function SolicitarDemoPage() {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto md:min-w-50"
+                  className="w-full md:w-auto md:min-w-50 cursor-pointer bg-whatsapp-green hover:bg-whatsapp-green/80"
                   >
+                    <WhatsappIcon className="inline-flex mr-2" />
                     {isSubmitting ? FORM_CONFIG.buttons.submitting : FORM_CONFIG.buttons.submit}
                   </Button>
                 </div>

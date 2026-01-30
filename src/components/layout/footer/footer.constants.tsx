@@ -10,31 +10,31 @@ export const SOCIAL_LINKS = [
     name: "X",
     link: "https://x.com/sistemagema",
     icon: XIcon,
-    bgColor: "bg-gradient-to-tr from-[#000000] to-[#434343]",
+    bgColor: "bg-gradient-to-tr from-twitter-black to-twitter-gray",
   },
   {
     name: "Facebook",
     link: "https://www.facebook.com/sistemagema",
     icon: FacebookIcon,
-    bgColor: "bg-[#558ccc]",
+    bgColor: "bg-facebook-blue",
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/sistemagema",
     icon: InstagramIcon,
-    bgColor: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
+    bgColor: "bg-gradient-to-tr from-instagram-orange via-instagram-pink to-instagram-purple",
   },
   {
     name: "YouTube",
     link: "https://www.youtube.com/@sistemagema",
     icon: YoutubeIcon,
-    bgColor: "bg-[#dc2626]",
+    bgColor: "bg-youtube-red",
   },
   {
     name: "WhatsApp",
     link: "https://wa.me/5493518084771",
     icon: WhatsappIcon,
-    bgColor: "bg-[#16a34a]",
+    bgColor: "bg-whatsapp-green",
   },
 ] as const
 
