@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import Lottie from "lottie-react";
 import { Printer, CheckIcon } from "lucide-react";
 import { usePrintImage } from "@/hooks";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import siroInstrucciones from "@/assets/image-siro-instrucciones.gif";
 import siroPagoEfectivo from "@/assets/image-siro-pagoefectivo.gif";
 import siroPagoElectronico from "@/assets/image-siro-pagoelectronico.gif";
@@ -29,12 +31,17 @@ export function MediosPagoPage() {
       </header>
 
       <section className="py-5">
+        <small className="block lg:hidden text-center text-gray-500 mb-2 text-sm">
+          click en la imagen para ampliar
+        </small>
         <figure>
-          <img
-            src={siroInstrucciones} 
-            alt="Instrucciones de pago Gema Roel Asiro" 
-            className="mx-auto max-w-full sm:max-w-[80%] h-auto"
-          />
+          <Zoom>
+            <img
+              src={siroInstrucciones} 
+              alt="Instrucciones de pago Gema Roel Asiro" 
+              className="mx-auto max-w-full sm:max-w-[80%] h-auto"
+            />
+          </Zoom>
         </figure>
       </section>
 
