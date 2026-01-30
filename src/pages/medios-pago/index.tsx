@@ -35,7 +35,11 @@ export function MediosPagoPage() {
           click en la imagen para ampliar
         </small>
         <figure>
-          <Zoom>
+          <Zoom
+            zoomMargin={40}
+            canSwipeToUnzoom={true}
+            swipeToUnzoomThreshold={50}
+          >
             <img
               src={siroInstrucciones} 
               alt="Instrucciones de pago Gema Roel Asiro" 
