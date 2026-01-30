@@ -52,9 +52,9 @@ export const FORM_CONFIG = {
   }
 }
 
-// URL de la API - ajustar según tu backend
+// URL de la API - ahora usa el proxy de Vite
 export const API_CONFIG = {
-  baseUrl: import.meta.env.VITE_API_BASE_URL || "http://localhost:3000",
+  baseUrl: "/api",
   endpoints: {
     requestDemo: "/Demo",
   }
