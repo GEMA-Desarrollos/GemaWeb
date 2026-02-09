@@ -45,4 +45,4 @@ export const BANK_ACCOUNT: BankAccountInfo = {
   cuit: "30-71041463-3",
 } as const
 
-export const BANK_TRANSFER_NOTE = "Si pagás por transferencia, recordá poner en observaciones o referencia el CUIT de tu farmacia." as const
+export const BANK_TRANSFER_NOTE = "Si pagás por transferencia, recordá poner en observaciones o referencia el CUIT de tu empresa o razón social." as const

@@ -106,7 +106,7 @@ export const TECHNICIANS: Technician[] = [
 
 export const HEADER_CONFIG = {
   title: "Soporte Técnico",
-  subtitle: "Red de técnicos certificados y especializados en Sistema GEMA disponibles en toda Argentina para garantizar el funcionamiento óptimo de tu farmacia."
+  subtitle: "Red de técnicos certificados y especializados en Sistema GEMA disponibles en toda Argentina para garantizar el funcionamiento óptimo de tu negocio."
 }
 
 export const FOOTER_CONFIG = {

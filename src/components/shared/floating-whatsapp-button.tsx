@@ -52,15 +52,15 @@ export function FloatingWhatsappButton({
     >
       {/* Panel de opciones */}
       {isOpen && (
-        <Card className="shadow-lg animate-in slide-in-from-bottom-2 fade-in-0 duration-200 w-64">
-          <CardContent className="p-2">
+        <Card className="p-2! shadow-lg animate-in slide-in-from-bottom-2 fade-in-0 duration-200 w-64">
+          <CardContent className="p-0!">
             <div className="flex flex-col gap-1">
               {options.map((option, index) => (
                 <Button
                   key={index}
                   variant="ghost"
                   size="default"
-                  className="justify-start w-full h-auto py-3 px-3 text-left hover:bg-whatsapp-green/10"
+                  className="cursor-pointer justify-start w-full h-auto py-3 px-3 text-left hover:bg-whatsapp-green/10"
                   onClick={() => handleOptionClick(option)}
                 >
                   <div className="flex items-center gap-3 w-full">

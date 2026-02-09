@@ -23,7 +23,7 @@ export function MediosPagoPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
               {HEADER_CONFIG.title}
             </h1>
-            <p className="text-xl sm:text-2xl mb-6">
+            <p className="text-lg sm:text-xl mb-6">
               {HEADER_CONFIG.subtitle}
             </p>
           </div>
@@ -40,6 +40,7 @@ export function MediosPagoPage() {
               src={siroInstrucciones} 
               alt="Instrucciones de pago Gema Roel Asiro" 
               className="mx-auto max-w-full sm:max-w-[80%] h-auto"
+              loading="lazy"
             />
           </Zoom>
         </figure>
@@ -64,11 +65,13 @@ export function MediosPagoPage() {
             src={siroPagoEfectivo} 
             alt="Opciones de pago en efectivo" 
             className="max-w-full h-auto"
+            loading="lazy"
           />
           <img 
             src={siroPagoElectronico} 
             alt="Opciones de pago electrónico" 
             className="max-w-full h-auto"
+            loading="lazy"
           />
         </div>
       </section>

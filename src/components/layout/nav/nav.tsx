@@ -52,7 +52,7 @@ export function Nav({ menuItems }: NavProps) {
                 <ChevronDownIcon className="size-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-dark-blue border-0 shadow-lg rounded-none mt-3 min-w-37.5 py-2 animate-in fade-in-0 zoom-in-95 duration-200 font-display" align="center">
+            <DropdownMenuContent className="bg-dark-blue border-0 shadow-lg rounded-none mt-3 min-w-44 py-2 animate-in fade-in-0 zoom-in-95 duration-200 font-display" align="center">
               {item.items.map((subItem) => (
                 <DropdownMenuItem key={subItem.link} asChild className="">
                   <Link

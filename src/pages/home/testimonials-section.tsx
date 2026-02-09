@@ -23,7 +23,7 @@ export function TestimonialsSection() {
             Lo que dicen nuestros clientes
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Miles de farmacias y comercios confían en nuestras soluciones.
+            Miles de empresas confían en nuestras soluciones.
             Conocé las experiencias de quienes ya transformaron su negocio.
           </p>
         </motion.div>

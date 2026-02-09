@@ -2,13 +2,23 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import {Button} from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import videoHero from "@/assets/video-hero.gif";
 
 export function HeroSection() {
   const navigate = useNavigate();
 
   return (
     <section className="relative py-24 px-0 sm:px-8 text-center overflow-hidden min-h-60 md:min-h-75">
-      <video
+
+
+      <img
+        src={videoHero}
+        alt="Hero Background"
+        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
+        loading="lazy"
+      />
+
+      {/* <video
         autoPlay
         loop
         muted
@@ -19,7 +29,7 @@ export function HeroSection() {
           src={"https://res.cloudinary.com/dhlabj0dm/video/upload/v1769189486/office_clip_borpno.mp4"}
           type="video/mp4"
         />
-      </video>
+      </video> */}
 
       {/* <img
         src={bannerHero}
@@ -55,7 +65,7 @@ export function HeroSection() {
           size="lg"
           className="bg-white hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-all hover:scale-105 mx-auto"
           variant="outline"
-          onClick={() => navigate("/solicitar-demo")}
+          onClick={() => navigate("/solicitar-info")}
         >
           Solicitar Información
         </Button>

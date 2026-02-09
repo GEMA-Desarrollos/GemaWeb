@@ -13,7 +13,7 @@ export function DescargasPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
               {HEADER_CONFIG.title}
             </h1>
-            <p className="text-xl sm:text-2xl mb-6">{HEADER_CONFIG.subtitle}</p>
+            <p className="text-lg sm:text-xl mb-6">{HEADER_CONFIG.subtitle}</p>
           </div>
         </div>
       </header>
