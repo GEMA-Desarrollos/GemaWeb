@@ -22,7 +22,17 @@ export function DescargasPage() {
           {DOWNLOADS.map((download) => (
             <Card key={download.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle>{download.name}</CardTitle>
+                {
+                  download.logo ? (
+                    <img
+                      src={download.logo}
+                      alt={`${download.name} Logo`}
+                      className="h-6 mb-4 mx-auto"
+                    />
+                  ) : (
+                    <CardTitle className="text-center mb-4">{download.name}</CardTitle>
+                  )
+                }
                 <CardDescription>{download.description}</CardDescription>
               </CardHeader>
               <CardContent>
