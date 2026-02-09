@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import {Button} from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import videoHero from "@/assets/video-hero.gif";
+import videoHero from "@/assets/video-hero.webm";
 
 export function HeroSection() {
   const navigate = useNavigate();
@@ -10,15 +10,8 @@ export function HeroSection() {
   return (
     <section className="relative py-24 px-0 sm:px-8 text-center overflow-hidden min-h-60 md:min-h-75">
 
-
-      <img
-        src={videoHero}
-        alt="Hero Background"
-        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
-        loading="lazy"
-      />
-
-      {/* <video
+      {/* webm video */}
+      <video
         autoPlay
         loop
         muted
@@ -26,10 +19,10 @@ export function HeroSection() {
         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
       >
         <source
-          src={"https://res.cloudinary.com/dhlabj0dm/video/upload/v1769189486/office_clip_borpno.mp4"}
-          type="video/mp4"
+          src={videoHero}
+          type="video/webm"
         />
-      </video> */}
+      </video>
 
       {/* <img
         src={bannerHero}
