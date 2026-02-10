@@ -1,5 +1,16 @@
 import type { Technician } from "./support.types"
 
+export const PAGE_INFO = {
+  header: {
+    title: "Soporte Técnico",
+    subtitle: "Red de técnicos certificados y especializados en Sistema GEMA disponibles en toda Argentina para garantizar el funcionamiento óptimo de tu negocio."
+  },
+  about: {
+    title: "¿Sos técnico?",
+    description: 'Si sos técnico informático, tenes experiencia con Sistema Gema y queres que pongamos tus datos en este listado, escribinos un mail con los siguientes datos "Nombre y Apellido", "Teléfono", "Mail" y "Area o Localidad" en que prestarias servicio haciendo click aquí.'
+  },
+}
+
 export const TECHNICIANS: Technician[] = [
   {
     id: "1",
@@ -103,21 +114,3 @@ export const TECHNICIANS: Technician[] = [
     location: "Sur de Córdoba"
   }
 ]
-
-export const HEADER_CONFIG = {
-  title: "Soporte Técnico",
-  subtitle: "Red de técnicos certificados y especializados en Sistema GEMA disponibles en toda Argentina para garantizar el funcionamiento óptimo de tu negocio."
-}
-
-export const FOOTER_CONFIG = {
-  about: {
-    title: "¿Sos técnico?",
-    description: "Si sos técnico informático, tenes experiencia con Sistema Gema y queres que pongamos tus datos en este listado, escribinos un mail con los siguientes datos (Nombre y Apellido, Teléfono, Mail y Area o Localidad en que prestarias servicio) haciendo click aquí."
-  },
-  contact: {
-    title: "Contacto GEMA",
-    email: "sistemagema@gmail.com",
-    phone: "351 4271159 / 351 4226382",
-    address: "General Simón Bolivar 348, Piso 4 - Córdoba"
-  }
-}

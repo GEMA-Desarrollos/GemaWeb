@@ -1,4 +1,5 @@
 export * from "./animated-number"
 export * from "./icons"
+export * from "./contact.constants"
 export { FloatingWhatsappButton } from "./floating-whatsapp-button"
 export type { FloatingWhatsappButtonProps, WhatsappOption } from "./floating-whatsapp-button.types"

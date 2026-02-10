@@ -1,7 +1,7 @@
 import { z } from "zod"
 
-// Esquema de validación para el formulario de solicitud de información, utilizando Zod
-export const requestInfoSchema = z.object({
+// Esquema de validación para el formulario de solicitud de contacto, utilizando Zod
+export const contactSchema = z.object({
   razonSocial: z
     .string()
     .min(1, "El nombre de la razón social es requerido")
@@ -58,5 +58,5 @@ export const requestInfoSchema = z.object({
   path: ["horarioHasta"],
 })
 
-// Tipo inferido de Zod - también disponible en request-info.types.ts
-export type RequestInfoFormData = z.infer<typeof requestInfoSchema>
+// Tipo inferido de Zod - también disponible en contact.types.ts
+export type ContactFormData = z.infer<typeof contactSchema>

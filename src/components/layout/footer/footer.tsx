@@ -1,7 +1,8 @@
 import { Phone, MapPin, Mail, Clock } from "lucide-react"
 import { cn } from "../../../lib/utils"
 import type { FooterProps } from "./footer.types"
-import { ABOUT_INFO, SOCIAL_LINKS, CONTACT_INFO, COPYRIGHT } from "./footer.constants"
+import { ABOUT_INFO, SOCIAL_LINKS, COPYRIGHT } from "./footer.constants"
+import { CONTACT_INFO } from "@/components/shared"
 
 export function Footer({ className }: FooterProps) {
   return (
@@ -30,7 +31,6 @@ export function Footer({ className }: FooterProps) {
             </h3>
             <div className="flex gap-3">
               {SOCIAL_LINKS.map((social) => {
-                const Icon = social.icon
                 return (
                   <a
                     key={social.name}
@@ -44,7 +44,7 @@ export function Footer({ className }: FooterProps) {
                     )}
                     aria-label={social.name}
                   >
-                    <Icon className="w-5 h-5" />
+                    <social.icon className="w-5 h-5" />
                   </a>
                 )
               })}
@@ -54,13 +54,13 @@ export function Footer({ className }: FooterProps) {
           {/* Columna 3: Contacto */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold border-b-2 border-gray-400 pb-2 inline-block">
-              {CONTACT_INFO.title}
+              Contacto
             </h3>
             <div className="space-y-3 text-sm!">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <p className="text-white/80 text-sm">
-                  {CONTACT_INFO.address}
+                  {CONTACT_INFO.fullAddress}
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ export function Footer({ className }: FooterProps) {
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0" />
                 <p className="text-white/80 text-sm">
-                  {CONTACT_INFO.phones}
+                  {CONTACT_INFO.phones.main.join(" / ")}
                 </p>
               </div>
               <div className="flex items-start gap-2">

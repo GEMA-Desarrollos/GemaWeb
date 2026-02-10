@@ -58,7 +58,7 @@ export function HeroSection() {
           size="lg"
           className="bg-white hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-all hover:scale-105 mx-auto"
           variant="outline"
-          onClick={() => navigate("/solicitar-info")}
+          onClick={() => navigate("/contacto")}
         >
           Solicitar Información
         </Button>

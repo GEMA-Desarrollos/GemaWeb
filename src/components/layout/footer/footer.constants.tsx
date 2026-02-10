@@ -1,4 +1,4 @@
-import { XIcon, FacebookIcon, InstagramIcon, YoutubeIcon, WhatsappIcon } from "@/components/shared/icons"
+import { IconXSocial, IconFacebookSocial, IconInstagramSocial, IconYoutubeSocial, IconWhatsappSocial } from "@/components/shared/icons"
 
 export const ABOUT_INFO = {
   title: "Sobre nosotros",
@@ -9,45 +9,33 @@ export const SOCIAL_LINKS = [
   {
     name: "X",
     link: "https://x.com/sistemagema",
-    icon: XIcon,
+    icon: IconXSocial,
     bgColor: "bg-gradient-to-tr from-twitter-black to-twitter-gray",
   },
   {
     name: "Facebook",
     link: "https://www.facebook.com/sistemagema",
-    icon: FacebookIcon,
+    icon: IconFacebookSocial,
     bgColor: "bg-facebook-blue",
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/sistemagema",
-    icon: InstagramIcon,
+    icon: IconInstagramSocial,
     bgColor: "bg-gradient-to-tr from-instagram-orange via-instagram-pink to-instagram-purple",
   },
   {
     name: "YouTube",
     link: "https://www.youtube.com/@sistemagema",
-    icon: YoutubeIcon,
+    icon: IconYoutubeSocial,
     bgColor: "bg-youtube-red",
   },
   {
     name: "WhatsApp",
-    link: "https://wa.me/5493518084771",
-    icon: WhatsappIcon,
+    link: "https://wa.me/5493515199330",
+    icon: IconWhatsappSocial,
     bgColor: "bg-whatsapp-green",
   },
 ] as const
-
-export const CONTACT_INFO = {
-  title: "Contacto",
-  address: "General Simón Bolivar 348, Piso 4, CP.5000 - Córdoba",
-  email: "sistemagema@gmail.com",
-  phones: "351 4271159 / 351 4226382",
-  schedule: [
-    "Lunes a viernes de 08:00 a 18:00",
-    "Sábados de 09:00 a 13:00",
-    "Línea de ayuda movil (0351) 155 199 330"
-  ],
-} as const
 
 export const COPYRIGHT = `© ${new Date().getFullYear()} Gema. Todos los derechos reservados.` as const

@@ -1,4 +1,5 @@
 import iconTeamviewer from "@/assets/icon-teamviewer.svg";
+import iconFonts from "@/assets/icon-fonts.svg"
 
 export const HEADER_CONFIG = {
   title: "Descargas",
@@ -10,13 +11,13 @@ export const DOWNLOADS = [
   {
     id: "teamviewer",
     logo: iconTeamviewer,
-    name: "TeamViewer",
+    name: "",
     description: "Descarga e instala TeamViewer para permitir el soporte remoto de nuestros técnicos.",
     url: "https://sistemagema.com.ar/download/TeamViewer_Setup.exe",
   },
   {
     id: "fuentes",
-    logo: "",
+    logo: iconFonts,
     name: "Fuentes",
     description: "Descarga e instala las fuentes para poder administrar correctamente el sistema Gema.",
     url: "https://7-zip.org/a/7z2501-extra.7z",

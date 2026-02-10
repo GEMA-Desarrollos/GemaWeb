@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { WhatsappIcon } from "@/components/shared/icons"
+import { IconWhatsappSocial } from "@/components/shared/icons"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -82,7 +82,7 @@ export function FloatingWhatsappButton({
         aria-label="WhatsApp"
         aria-expanded={isOpen}
       >
-        <WhatsappIcon className="size-7" />
+        <IconWhatsappSocial className="size-7" />
       </Button>
     </div>
   )

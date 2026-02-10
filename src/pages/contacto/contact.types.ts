@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 import type { UseFormSetValue } from "react-hook-form"
 
 // Datos del formulario de solicitud de info inferido del schema de validación Zod
-export interface RequestInfoFormData {
+export interface contactFormData {
   razonSocial: string
   cuit: string
   telefono: string
@@ -16,7 +16,7 @@ export interface RequestInfoFormData {
 }
 
 // Payload que se envía a la API
-export interface InfoRequestPayload {
+export interface contactPayload {
   razonSocial: string
   cuit: string
   telefono: string

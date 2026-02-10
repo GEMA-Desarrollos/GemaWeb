@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import type ReCAPTCHA from "react-google-recaptcha"
-import type { UseRecaptchaOptions, UseRecaptchaReturn } from "./request-info.types"
+import type { UseRecaptchaOptions, UseRecaptchaReturn } from "./contact.types"
 
 /**
  * Hook personalizado para gestionar reCAPTCHA v2

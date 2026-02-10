@@ -1,20 +1,20 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { requestInfoSchema } from "./request-info.schema"
-import { filterOnlyNumbers } from "./request-info.utils"
-import type { RequestInfoFormData, InfoRequestPayload, SubmitStatus } from "./request-info.types"
+import { contactSchema } from "./contact.schema"
+import { filterOnlyNumbers } from "./contact.utils"
+import type { contactFormData, contactPayload, SubmitStatus } from "./contact.types"
 
 /**
  * Hook personalizado para el formulario de solicitud de información.
  * Encapsula toda la lógica del formulario incluyendo validación,
  * handlers de inputs y submit
  */
-export function useRequestInfoForm() {
+export function useContactForm() {
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("")
 
-  const form = useForm<RequestInfoFormData>({
-    resolver: zodResolver(requestInfoSchema),
+  const form = useForm<contactFormData>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       razonSocial: "",
       cuit: "",
@@ -53,10 +53,10 @@ export function useRequestInfoForm() {
   }
 
   // Handler para el envío del formulario, que incluye la llamada a la API y la redirección a WhatsApp
-  const onSubmit = async (data: RequestInfoFormData) => {
+  const onSubmit = async (data: contactFormData) => {
     setSubmitStatus("")
     try {
-      const payload: InfoRequestPayload = {
+      const payload: contactPayload = {
         razonSocial: data.razonSocial,
         cuit: data.cuit,
         telefono: data.telefono,

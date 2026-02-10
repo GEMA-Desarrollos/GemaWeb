@@ -5,7 +5,7 @@ import { FloatingWhatsappButton } from "@/components/shared"
 import { HomePage } from "@/pages/home"
 import { MediosPagoPage } from "@/pages/medios-pago"
 import { SoporteTecnicoPage } from "./pages/soporte-tecnico"
-import { SolicitarInfoPage } from "./pages/solicitar-info"
+// import { SolicitarInfoPage } from "./pages/contacto"
 import { QuienesSomosPage } from "./pages/quienes-somos"
 import { ContactoPage } from "./pages/contacto"
 import { DescargasPage } from "./pages/descargas"
@@ -20,7 +20,6 @@ export function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/medios-pago" element={<MediosPagoPage />} />
             <Route path="/soporte-tecnico" element={<SoporteTecnicoPage />} />
-            <Route path="/solicitar-info" element={<SolicitarInfoPage />} />
             <Route path="/quienes-somos" element={<QuienesSomosPage />} />
             <Route path="/contacto" element={<ContactoPage />} />
             <Route path="/descargas" element={<DescargasPage />} />

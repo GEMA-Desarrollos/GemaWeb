@@ -1,4 +1,6 @@
 import type { BankAccountInfo, BonusInfo } from "./medios-pago.types"
+import { CONTACT_INFO } from "@/components/shared"
+
 
 export const HEADER_CONFIG = {
   title: "Pago de cuotas",
@@ -33,7 +35,7 @@ export const BONUS_SECTION = {
 export const OTHER_PAYMENT_SECTION = {
   title: "Otras opciones de pago",
   options: [
-    "Pago en efectivo en nuestro local de General Simón Bolívar 348, Piso 4, de la Ciudad de Córdoba.",
+    `Pago en efectivo en nuestro local de ${CONTACT_INFO.shortAddress}.`,
     "Por transferencia bancaria a nuestra cuenta corriente en pesos:",
   ] as const,
 } as const

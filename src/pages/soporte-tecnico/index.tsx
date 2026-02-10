@@ -2,7 +2,8 @@ import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TechnicianCard } from "./technician-card";
 import { SearchFilter } from "./search-filter";
-import { HEADER_CONFIG, FOOTER_CONFIG } from "./support.constants";
+import { PAGE_INFO } from "./support.constants";
+import { CONTACT_INFO } from "@/components/shared";
 import { useTechnicianFilters } from "./support.hooks";
 import animationGearwrench from "@/assets/animation-gearwrench.json";
 import Lottie from "lottie-react";
@@ -16,9 +17,9 @@ export function SoporteTecnicoPage() {
         <div className="container mx-auto py-2 sm:py-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
-              {HEADER_CONFIG.title}
+              {PAGE_INFO.header.title}
             </h1>
-            <p className="text-lg sm:text-xl mb-6">{HEADER_CONFIG.subtitle}</p>
+            <p className="text-lg sm:text-xl mb-6">{PAGE_INFO.header.subtitle}</p>
           </div>
         </div>
       </header>
@@ -68,10 +69,10 @@ export function SoporteTecnicoPage() {
         <div className="mt-16">
           <div className="border-4 border-solid border-gray-300 p-8">
             <h3 className="text-2xl font-bold mb-3 text-center text-gray-700">
-              {FOOTER_CONFIG.about.title}
+              {PAGE_INFO.about.title}
             </h3>
             <div className="flex gap-2 mb-4">
-              <p className="text-gray-500">{FOOTER_CONFIG.about.description}</p>
+              <p className="text-gray-500">{PAGE_INFO.about.description}</p>
             </div>
             <div className="w-full sm:flex sm:justify-center">
               <Button
@@ -81,7 +82,7 @@ export function SoporteTecnicoPage() {
                 className="w-full sm:w-auto hover:scale-105 transition-transform hover:cursor-pointer"
               >
                 <a
-                  href={`mailto:${FOOTER_CONFIG.contact.email}?subject=Solicitud para unirse como técnico GEMA`}
+                  href={`mailto:${CONTACT_INFO.email}?subject=Solicitud para unirse como técnico GEMA`}
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   Contáctanos

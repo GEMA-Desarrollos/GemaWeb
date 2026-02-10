@@ -4,7 +4,7 @@ import type { WhatsappOption } from "./floating-whatsapp-button.types"
 export const DEFAULT_WHATSAPP_OPTIONS: WhatsappOption[] = [
   {
     label: "Solicitar Información",
-    href: "/solicitar-info",
+    href: "/contacto",
     icon: <Calendar className="size-5 text-primary-blue" />,
   },
   {

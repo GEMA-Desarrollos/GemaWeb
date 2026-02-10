@@ -14,13 +14,12 @@ export const NAV_MENU_ITEMS: readonly NavMenuItem[] = [
     label: "Empresa",
     items: [
       { link: "/quienes-somos", label: "Quiénes Somos" },
-      { link: "/contacto", label: "Contacto" },
+      { link: "/contacto", label: "Contacto" }
     ],
   },
   {
     label: "Servicios",
     items: [
-      { link: "/solicitar-info", label: "Solicitar Información" },
       { link: "https://sistemagema.com.ar/sucursales/iniciarsesion.asp", label: "Sucursales" },
       { link: "https://sistemagema.com.ar/inicio.aspx", label: "Validador OS" },
     ],
