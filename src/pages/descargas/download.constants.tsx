@@ -3,7 +3,7 @@ import iconFonts from "@/assets/icon-fonts.svg"
 
 export const HEADER_CONFIG = {
   title: "Descargas",
-  subtitle: "Descarga las herramientas necesarias para soporte remoto y otras funciones.",
+  subtitle: "Descarga las herramientas necesarias para soporte remoto u otros recursos esenciales para el correcto funcionamiento nuestros sistemas. Todas las descargas son seguras y están actualizadas.",
 };
 
 // texto para la descarga de TeamViewer

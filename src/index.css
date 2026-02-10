@@ -205,8 +205,8 @@ html body[data-scroll-locked] {
   margin-right: 0 !important;
 }
 
-.magicpattern { 
-    background-image: radial-gradient(#C3C3C3 2px, transparent 2px);
+.dotsPattern { 
+    background-image: radial-gradient(#c3c3c397 2px, transparent 2px);
     background-color: transparent;
     background-size: 25px 25px;
     position: relative;

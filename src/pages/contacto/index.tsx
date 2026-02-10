@@ -41,7 +41,7 @@ export function ContactoPage() {
         </div>
       </header>
 
-      <section className="magicpattern py-10">
+      <section className="dotsPattern py-10">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <Card>
