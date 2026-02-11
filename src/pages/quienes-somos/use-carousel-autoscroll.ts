@@ -5,7 +5,7 @@ import type AutoScroll from "embla-carousel-auto-scroll"
 interface UseCarouselAutoscrollParams {
   api: CarouselApi | undefined
   isPaused: boolean
-  autoScrollPlugin: AutoScroll
+  autoScrollPlugin: ReturnType<typeof AutoScroll>
 }
 
 export function useCarouselAutoscroll({ api, isPaused, autoScrollPlugin }: UseCarouselAutoscrollParams) {
