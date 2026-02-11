@@ -1,6 +1,11 @@
 import { motion } from "framer-motion"
+import {Button} from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+
 
 export function ContactSection() {
+  const navigate = useNavigate();
+
   return (
     <motion.section
       initial={{ opacity: 0, scale: 0.95 }}
@@ -12,12 +17,16 @@ export function ContactSection() {
       <div className="container-custom text-center">
         <h2 className="text-4xl font-bold mb-4">¿Listo para comenzar?</h2>
         <p className="text-xl text-muted-foreground mb-8">
-          Contactanos hoy y descubre cómo nuestras soluciones pueden
-          transformar tu negocio.
+          En Gema te ofrecemos desarrollados de primer nivel para potenciar tu éxito, rompiendo límites, impulsando la innovación y entregando resultados extraordinarios.
         </p>
-        <button className="bg-primary text-white px-8 py-3 rounded-md font-semibold transition-all hover:scale-105 mx-auto">
+        <Button
+          size="lg"
+          variant="default"
+          className="cursor-pointer px-8 py-6 text-lg transition-all hover:scale-105"
+          onClick={() => navigate("/contacto")}
+        >
           Solicitar Información
-        </button>
+        </Button>
       </div>
     </motion.section>
   )

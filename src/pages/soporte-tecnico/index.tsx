@@ -67,7 +67,7 @@ export function SoporteTecnicoPage() {
 
         {/* Footer CTA Section */}
         <div className="mt-16">
-          <div className="border-4 border-solid border-gray-300 p-8">
+          <div className="border-4 border-solid border-gray-300 p-8 rounded-tl-3xl rounded-br-3xl">
             <h3 className="text-2xl font-bold mb-3 text-center text-gray-700">
               {PAGE_INFO.about.title}
             </h3>

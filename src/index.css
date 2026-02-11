@@ -206,8 +206,15 @@ html body[data-scroll-locked] {
 }
 
 .dotsPattern { 
-    background-image: radial-gradient(#c3c3c397 2px, transparent 2px);
-    background-color: transparent;
-    background-size: 25px 25px;
-    position: relative;
+  background-image: radial-gradient(#c3c3c397 2px, transparent 2px);
+  background-color: transparent;
+  background-size: 25px 25px;
+  position: relative;
+}
+
+.dotsPatternInverted { 
+  background-image: radial-gradient(#ffffff 2px, transparent 2px);
+  background-color: #c3c3c397;
+  background-size: 25px 25px;
+  position: relative;
 }

@@ -24,29 +24,31 @@ export function MediosPagoPage() {
         </div>
       </header>
 
-      <section className="py-5! container-custom">
-        <small className="block lg:hidden text-center text-gray-500 mb-2 text-sm">
-          click en la imagen para ampliar
-        </small>
-        <figure>
-          <Zoom>
-            <img
-              src={PAGE_INFO.header.image} 
-              alt="Instrucciones de pago Siro"
-              className="mx-auto max-w-full sm:max-w-[80%] h-auto"
-              loading="lazy"
-            />
-          </Zoom>
-        </figure>
+      <section className="py-5!">
+        <div className="container-custom">
+          <small className="block lg:hidden text-center text-gray-500 mb-2 text-sm">
+            click en la imagen para ampliar
+          </small>
+          <figure>
+            <Zoom>
+              <img
+                src={PAGE_INFO.header.image} 
+                alt="Instrucciones de pago Siro"
+                className="mx-auto max-w-full sm:max-w-[80%] h-auto rounded-3xl shadow-md"
+                loading="lazy"
+              />
+            </Zoom>
+          </figure>
+        </div>
       </section>
 
-      <section className="py-8! dotsPattern">
+      <section className="py-8!">
         <div className="container-custom">
           <div className="flex items-center justify-center gap-3 mb-2">
             <h2 className="text-2xl sm:text-3xl font-semibold">{PAGE_INFO.cupon.title}</h2>
           </div>
           <div className="flex items-center justify-center mb-2">
-            <p className="text-center bg-white px-4 py-4 ">
+            <p className="text-center px-4 py-4 ">
               {PAGE_INFO.cupon.description}
             </p>
           </div>
@@ -57,7 +59,7 @@ export function MediosPagoPage() {
                   key={index}
                   src={imgSrc} 
                   alt={`Opciones de pago ${index === 0 ? "en efectivo" : "electrónico"}`} 
-                  className="max-w-full h-auto"
+                  className=" max-w-full h-auto rounded-3xl shadow-md"
                   loading="lazy"
                 />
               ))
@@ -88,7 +90,7 @@ export function MediosPagoPage() {
             variant="default" 
             size="lg" 
             onClick={printFormulario}
-            className="w-full sm:w-auto hover:scale-105 transition-transform hover:cursor-pointer"
+            className="py-6 px-4 w-full sm:w-auto hover:scale-105 transition-transform hover:cursor-pointer"
           >
             <Printer className="mr-2 h-5 w-5" />
             Imprimir Formulario
