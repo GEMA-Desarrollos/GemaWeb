@@ -1,6 +1,6 @@
-import type { Technician } from "./support.types"
+import type { Technician, PageInfo } from "./support.types"
 
-export const PAGE_INFO = {
+export const PAGE_INFO: PageInfo = {
   header: {
     title: "Soporte Técnico",
     subtitle: "Red de técnicos certificados y especializados en Sistema GEMA disponibles en toda Argentina para garantizar el funcionamiento óptimo de tu negocio."

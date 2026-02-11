@@ -4,8 +4,9 @@ import siroPagoEfectivo from "@/assets/image-siro-pagoefectivo.gif";
 import siroPagoElectronico from "@/assets/image-siro-pagoelectronico.gif";
 import siroFormulario from "@/assets/image-siro-formulario.jpg";
 import animationMoney from "@/assets/animation-money.json";
+import type { PageInfo } from "./payment-methods.types"
 
-export const PAGE_INFO = {
+export const PAGE_INFO: PageInfo = {
   header: {
     title: "Pago de cuotas",
     subtitle: "Conocé todas las formas de pago disponibles para abonar tu suscripción mensual de sistema GEMA de forma rápida y segura.",

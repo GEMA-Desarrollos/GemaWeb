@@ -1,7 +1,8 @@
 import { CONTACT_INFO } from "@/components/shared"
+import type { PageInfo } from "./contact.types"
 
 // Configuración del header de la página de contacto
-export const PAGE_INFO = {
+export const PAGE_INFO: PageInfo = {
   title: "Contacto",
   subtitle: "Agradecemos tu interés en nuestros servicios. Completá el formulario para solicitar información personalizada sobre nuestros productos, cotizaciones o consultas generales, y nuestro equipo se pondrá en contacto con vos a la brevedad para brindarte toda la información que necesites.",
   address: `Nos encontramos en ${CONTACT_INFO.shortAddress}, en el corazón de Córdoba Capital. Visitanos de ${CONTACT_INFO.schedule[0]} o los ${CONTACT_INFO.schedule[1]}. También podés contactarnos por teléfono al ${CONTACT_INFO.phones.main.join(" / ")}, o a través de nuestra ${CONTACT_INFO.schedule[2]}.`,
@@ -56,4 +57,4 @@ export const FORM_CONFIG = {
     success: "Redirigiendo a WhatsApp...",
     error: "Ocurrió un error al procesar la solicitud. Por favor, intentá nuevamente.",
   }
-}
+} as const

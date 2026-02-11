@@ -1,8 +1,6 @@
-import { Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { PAGE_INFO } from "./download.constants";
-import { downloadFile } from "./download.utils";
+import { PAGE_INFO } from "./download.constants"
+import { downloadFile } from "./download.utils"
+import { DownloadCard } from "./download-card"
 
 export function DescargasPage() {
   return (
@@ -17,33 +15,17 @@ export function DescargasPage() {
           </div>
         </div>
       </header>
-      <main className="container mx-auto pb-12">
+      <section className="container mx-auto pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {PAGE_INFO.downloads.map((download) => {
-            return (
-              <Card key={download.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                <div className="flex justify-center items-center gap-2">
-                  <download.logo className="h-6 mb-4" />
-                  <CardTitle className="text-xl text-center mb-4">{download.name}</CardTitle>
-                </div>
-                <CardDescription>{download.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button
-                    onClick={() => downloadFile(download.url, `${download.name}.exe`)}
-                    className="w-full cursor-pointer"
-                    size="lg"
-                  >
-                    <Download className="h-5 w-5 mr-2" />
-                    Descargar
-                  </Button>
-                </CardContent>
-              </Card>
-            )
-          })}
+          {PAGE_INFO.downloads.map((download) => (
+            <DownloadCard
+              key={download.id}
+              download={download}
+              onDownload={downloadFile}
+            />
+          ))}
         </div>
-      </main>
+      </section>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
 import type { RefObject } from "react"
 import ReCAPTCHA from "react-google-recaptcha"
-import type { UseFormSetValue } from "react-hook-form"
+import type { UseFormSetValue, UseFormReturn } from "react-hook-form"
 
 // Datos del formulario de solicitud de info inferido del schema de validación Zod
 export interface contactFormData {
@@ -42,4 +42,31 @@ export interface UseRecaptchaReturn {
   resetRecaptcha: () => void
   executeRecaptcha: () => Promise<string | null>
   getRecaptchaValue: () => string | null
+}
+
+// Interfaces para componentes
+export interface PageInfo {
+  title: string
+  subtitle: string
+  address: string
+  mapsUrl: string
+}
+
+export interface PageHeaderProps {
+  title: string
+  subtitle: string
+}
+
+export interface ContactFormProps {
+  form: UseFormReturn<contactFormData>
+  submitStatus: SubmitStatus
+  handleCuitChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  handleTelefonoChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onSubmit: (data: contactFormData) => void
+}
+
+export interface LocationSectionProps {
+  title: string
+  address: string
+  mapsUrl: string
 }
