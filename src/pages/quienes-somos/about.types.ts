@@ -18,7 +18,7 @@ export interface PageInfo {
     description: string
     video: string
   }
-  values: {
+  ourValues: {
     title: string
     description: string
   }
@@ -27,6 +27,10 @@ export interface PageInfo {
     description: string
   }
   trustedBrands: {
+    title: string
+    description: string
+  }
+  callToAction: {
     title: string
     description: string
   }

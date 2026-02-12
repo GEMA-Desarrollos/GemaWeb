@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 import { AnimatedNumber } from "@/components/shared"
-import { STATS } from "./home.constants"
 import { parseStatValue } from "./stats-section.utils"
+import type { StatsSectionProps } from "./home.types"
 
-export function StatsSection() {
+export function StatsSection({ stats }: StatsSectionProps) {
   return (
     <motion.section
       className="py-15 bg-dark-blue text-white"
@@ -15,8 +15,8 @@ export function StatsSection() {
     >
       <div className="container-custom">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-          {STATS.map((stat, index) => {
-            const { prefix, number, suffix } = parseStatValue(stat.value)
+          {stats.map((stat, index) => {
+            const { prefix, number, suffix } = stat.value ? parseStatValue(stat.value) : { prefix: "", number: 0, suffix: "" }
 
             return (
               <motion.div
@@ -24,14 +24,15 @@ export function StatsSection() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ 
+                transition={{
                   duration: 0.5,
                   delay: 0.2 + index * 0.1,
                 }}
               >
                 <h3 className="text-5xl font-bold mb-2 flex items-center justify-center font-sans">
                   {prefix}
-                  <AnimatedNumber value={number} />
+                  {number > 0 && <AnimatedNumber value={number} />}
+                  {stat?.icon && <stat.icon size={48}  strokeWidth={3} className="text-white" />}
                   {suffix}
                 </h3>
                 <p className="text-lg opacity-90 font-display">{stat.label}</p>

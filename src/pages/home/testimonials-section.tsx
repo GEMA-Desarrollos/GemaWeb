@@ -1,12 +1,12 @@
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
 import { TestimonialCard } from "./testimonial-card"
-import { TESTIMONIALS } from "./home.constants"
 import { motion } from "framer-motion"
 import { useBreakpoint } from "@/hooks"
 import { ANIMATIONS } from "./testimonials-section.constants"
+import type { TestimonialsSectionProps } from "./home.types"
 
-export function TestimonialsSection() {
+export function TestimonialsSection({ title, description, testimonials }: TestimonialsSectionProps) {
   const breakpoint = useBreakpoint()
   const animations = ANIMATIONS[breakpoint]
 
@@ -20,11 +20,10 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <h2 className="text-4xl font-bold text-center mb-4">
-            Lo que dicen nuestros clientes
+            {title}
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Miles de empresas confían en nuestras soluciones.
-            Conocé las experiencias de quienes ya transformaron su negocio.
+            {description}
           </p>
         </motion.div>
         
@@ -43,7 +42,7 @@ export function TestimonialsSection() {
             className="mt-12 lg:hidden"
           >
             <CarouselContent className="-ml-4">
-              {TESTIMONIALS.map((testimonial) => (
+              {testimonials.map((testimonial) => (
                 <CarouselItem 
                   key={testimonial.name} 
                   className="pl-4 basis-full md:basis-1/2"
@@ -59,7 +58,7 @@ export function TestimonialsSection() {
 
         {/* Grid para desktop */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
-          {TESTIMONIALS.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={animations[index]}

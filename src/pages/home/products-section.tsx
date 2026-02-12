@@ -1,16 +1,10 @@
 import Autoplay from "embla-carousel-autoplay"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
 import { ProductCard } from "./product-card"
-import { PRODUCTS } from "./home.constants"
 import { motion } from "framer-motion"
+import type { ProductsSectionProps } from "./home.types"
 
-export function ProductsSection() {
+export function ProductsSection({ title, description, products }: ProductsSectionProps) {
   return (
     <section id="productos" className="py-15! container-custom">
       <motion.div
@@ -20,11 +14,10 @@ export function ProductsSection() {
         transition={{ duration: 2, ease: "easeOut" }}
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
-          Nuestros Productos
+          {title}
         </h2>
         <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Desarrollamos software especializado para la gestión integral de farmacias, 
-          adaptándonos a las necesidades específicas de cada establecimiento.
+          {description}
         </p>
       </motion.div>
       
@@ -50,7 +43,7 @@ export function ProductsSection() {
           className="mt-12 lg:hidden"
         >
           <CarouselContent className="-ml-4">
-            {PRODUCTS.map((product) => (
+            {products.map((product) => (
               <CarouselItem 
                 key={product.title} 
                 className="pl-4 basis-full md:basis-1/3"
@@ -66,7 +59,7 @@ export function ProductsSection() {
 
       {/* Grid para desktop con animaciones */}
       <div className="hidden lg:grid lg:grid-cols-4 gap-10 mt-12">
-        {PRODUCTS.map((product, index) => (
+        {products.map((product, index) => (
           <motion.div
             key={product.title}
             initial={{ opacity: 0, y: 50 }}

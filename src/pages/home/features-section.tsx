@@ -1,10 +1,10 @@
 import { motion } from "framer-motion"
 import { FeatureCard } from "./feature-card"
-import { FEATURES } from "./home.constants"
 import { useBreakpoint } from "@/hooks"
 import { ANIMATIONS } from "./features-section.constants"
+import type { FeaturesSectionProps } from "./home.types"
 
-export function FeaturesSection() {
+export function FeaturesSection({ title, description, features }: FeaturesSectionProps) {
   const breakpoint = useBreakpoint()
   const animations = ANIMATIONS[breakpoint]
 
@@ -21,16 +21,15 @@ export function FeaturesSection() {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <h2 className="text-4xl font-bold text-center mb-4">
-            Características Principales
+            {title}
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
-            Sistema Gema está diseñado pensando en la experiencia del usuario 
-            y la eficiencia operativa.
+            {description}
           </p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {FEATURES.map((feature, index) => (
+          {features.map((feature, index) => (
             <motion.div
               key={feature.letter}
               initial={animations[index]}

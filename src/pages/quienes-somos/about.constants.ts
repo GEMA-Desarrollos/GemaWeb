@@ -67,13 +67,13 @@ export const BRANDS: Brand[] = [
   { id: 8, Icon: IconMcdonaldBrand, name: "McDonald's" },
 ]
 
-export const PAGE_INFO: PageInfo = {
+export const PAGE_DATA: PageInfo = {
   hero: {
+    video: videoHero,
     title: "Ingeniería e innovación",
     description: "Desde 2006, Gema impulsa el crecimiento tanto de los desarrolladores como de las empresas que los contratan. Conectamos a los mejores ingenieros de todo el mundo con marcas líderes, adaptando sus habilidades técnicas y su adaptación cultural a los objetivos de cada cliente.",
-    video: videoHero
   },
-  values: {
+  ourValues: {
     title: "Nuestros valores",
     description: "Nuestra cultura Sigue Avanzando fomenta un entorno único y de apoyo donde los desarrolladores prosperan. Priorizamos el aprendizaje continuo, el acceso a tecnología avanzada, el apoyo al bienestar y las iniciativas con propósito. Esto crea un ecosistema potente que impulsa la innovación del cliente y empodera a los desarrolladores para alcanzar resultados ambiciosos."
   },
@@ -84,5 +84,9 @@ export const PAGE_INFO: PageInfo = {
   trustedBrands: {
     title: "Confían en nosotros...",
     description: "Empresas líderes a nivel mundial eligen nuestros servicios y productos"
+  },
+  callToAction: {
+    title: "¿Listo para comenzar?",
+    description: "En Gema te ofrecemos desarrollados de primer nivel para potenciar tu éxito, rompiendo límites, impulsando la innovación y entregando resultados extraordinarios."
   }
 }

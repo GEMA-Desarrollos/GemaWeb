@@ -2,15 +2,13 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import {Button} from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import videoHero from "@/assets/video-hero.webm";
+import type { HeroSectionProps } from "./home.types"
 
-export function HeroSection() {
+export function HeroSection({ video, title, description }: HeroSectionProps) {
   const navigate = useNavigate();
 
   return (
     <section className="relative py-18 sm:py-24 px-0 sm:px-8 text-center overflow-hidden min-h-60 md:min-h-75">
-
-      {/* webm video */}
       <video
         autoPlay
         loop
@@ -18,24 +16,14 @@ export function HeroSection() {
         playsInline
         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
       >
-        <source
-          src={videoHero}
-          type="video/webm"
-        />
+        <source src={video} type="video/webm" />
       </video>
-
-      {/* <img
-        src={bannerHero}
-        alt="Hero Background"
-        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-110"
-      /> */}
-
       <div className="absolute inset-0 bg-black/50" />
       <div className="px-0 sm:px-8 max-w-300 mx-auto py-0 relative z-10 flex flex-col justify-center min-h-50 md:min-h-75">
         <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-white min-h-18.75 font-mono">
           <Typewriter
             options={{
-              strings: "Software que Impulsa tu Negocio",
+              strings: title,
               autoStart: true,
               loop: false,
               delay: 75,
@@ -48,8 +36,7 @@ export function HeroSection() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-lg md:text-xl mb-10 opacity-95 leading-relaxed font-display text-white max-w-3xl mx-auto"
         >
-          Soluciones tecnológicas innovadoras y escalables, diseñadas para
-          optimizar tus procesos y acelerar el crecimiento de tu empresa.
+          {description}
         </motion.p>
         <Button
           size="lg"
@@ -59,7 +46,6 @@ export function HeroSection() {
         >
           Solicitar Información
         </Button>
-
       </div>
     </section>
   );

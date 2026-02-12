@@ -1,5 +1,5 @@
 
-import type { Product, Stat, Testimonial, FeatureCardProps } from "./home.types"
+import type { Product, Stat, Testimonial, FeatureCardProps, PageInfo } from "./home.types"
 import iconSistemaGema from "@/assets/icon-sistema-gema.png"
 import iconTurnero from "@/assets/icon-turnero.png"
 import iconFeComercios from "@/assets/icon-fe-comercios.png"
@@ -8,54 +8,79 @@ import animationPuzzle from "@/assets/animation-puzzle.json"
 import animationDB from "@/assets/animation-db.json"
 import animationCheck from "@/assets/animation-check.json"
 import animationSatellite from "@/assets/animation-satellite.json"
+import videoHero from "@/assets/video-hero.webm";
+import { Headset } from "lucide-react"
 
-export const PRODUCTS: readonly Product[] = [
+
+export const PAGE_DATA: PageInfo = {
+  hero: {
+    video: videoHero,
+    title: "Software que Impulsa tu Negocio",
+    description: "Soluciones tecnológicas innovadoras y escalables, diseñadas para optimizar tus procesos y acelerar el crecimiento de tu empresa.",
+  },
+  products: {
+    title: "Nuestros Productos",
+    description: "Desarrollamos software especializado para la gestión integral de negocios, adaptándonos a las necesidades específicas de cada establecimiento."
+  },
+  stats: {
+    title: "Características Principales",
+    description: "Sistema Gema está diseñado pensando en la experiencia del usuario y la eficiencia operativa."
+  },
+  testimonials: {
+    title: "Lo que dicen nuestros clientes",
+    description: "Miles de empresas confían en nuestras soluciones. Conocé las experiencias de quienes ya transformaron su negocio."
+  },
+  callToAction: {
+    title: "¿Listo para comenzar?",
+    description: "En Gema te ofrecemos desarrollados de primer nivel para potenciar tu éxito, rompiendo límites, impulsando la innovación y entregando resultados extraordinarios."
+  }
+}
+
+export const LIST_PRODUCTS: readonly Product[] = [
   {
     icon: iconSistemaGema,
     title: "Sistema Gema",
-    description: "Software completo para la administración de farmacias con facturación electrónica integrada.",
+    description: "Software completo para la administración de negocios con facturación, control de inventario en tiempo real y reportes avanzados.",
     features: [
-      "Control de inventario en tiempo real",
+      "Control de stock y precios",
       "Facturación electrónica AFIP",
-      "Gestión de ventas y compras",
-      "Reportes y estadísticas avanzadas",
+      "Gestión completa desde un único sistema",
+      "Centralización de múltiples sucursales"
     ],
   },
   {
     icon: iconTurnero,
     title: "Turnero Gema",
-    description: "Gestión eficiente de turnos independiente integrable con Gema Farmacias.",
+    description: "Sistema de gestión de turnos digital que elimina filas y organiza la atención al cliente de forma eficiente.",
     features: [
-      "Turnero digital",
-      "Integración con Gema",
+      "Turnos por DNI, CUIL o número secuencial",
+      "Llamá a tus clientes desde el sistema",
       "Visor de publicidades o entretenimiento",
+      "Mejora la organización y la experiencia del cliente",
     ],
   },
   {
     icon: iconFeComercios,
     title: "Facturación-E",
-    description: "Sistema de gestión con factura electrónica para todo tipo de negocios minoristas.",
+    description: "Sistema integrado con facturación electrónica.",
     features: [
       "Facturación online sin impresora fiscal",
-      "Adaptable a múltiples rubros",
-      "Control de stock y ventas",
-      "Interfaz intuitiva y moderna",
+      "Ahorra en papeleria y almacenaje",
+      "Genera credibilidad y demuestra formalidad",
     ],
   },
   {
     icon: iconTrazabilidad,
     title: "Trazabilidad",
-    description: "Primer software homologado del país para el seguimiento integral de medicamentos.",
+    description: "Primer software homologado del país en trazabilidad de medicamentos.",
     features: [
       "Cumplimiento normativo ANMAT",
-      "Trazabilidad completa de productos",
       "Registro automatizado",
-      "Reportes de auditoría",
     ],
   },
 ] as const
 
-export const FEATURES: readonly FeatureCardProps[] = [
+export const LIST_FEATURES: readonly FeatureCardProps[] = [
   {
     letter: "S",
     title: "Simple",
@@ -65,7 +90,7 @@ export const FEATURES: readonly FeatureCardProps[] = [
   {
     letter: "A",
     title: "Adaptable",
-    description: "Se ajusta a las necesidades específicas de cada farmacia, sin importar su tamaño o complejidad.",
+    description: "Se ajusta a las necesidades específicas de cada negocio, sin importar su tamaño o complejidad.",
     animation: animationPuzzle,
   },
   {
@@ -82,14 +107,14 @@ export const FEATURES: readonly FeatureCardProps[] = [
   },
 ] as const
 
-export const STATS: readonly Stat[] = [
+export const LIST_STATS: readonly Stat[] = [
   { value: "+1200", label: "Negocios activos" },
   { value: "100%", label: "Soporte nacional" },
-  { value: "24/7", label: "Asistencia técnica" },
-  { value: "+10", label: "Años de experiencia" },
+  { value: undefined, label: "Asistencia técnica", icon: Headset },
+  { value: "+20", label: "Años de experiencia" },
 ] as const
 
-export const TESTIMONIALS: readonly Testimonial[] = [
+export const LIST_TESTIMONIALS: readonly Testimonial[] = [
   {
     name: "María González",
     role: "Propietaria",

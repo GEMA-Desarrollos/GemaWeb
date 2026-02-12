@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 import {Button} from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import type { CallToActionSectionProps } from "./home.types";
 
-
-export function CallToActionSection() {
+export function CallToActionSection({ title, description }: CallToActionSectionProps) {
   const navigate = useNavigate();
 
   return (
@@ -15,9 +15,9 @@ export function CallToActionSection() {
       className="py-15 border-t border-gray-200"
     >
       <div className="container-custom text-center">
-        <h2 className="text-4xl font-bold mb-4">¿Listo para comenzar?</h2>
+        <h2 className="text-4xl font-bold mb-4">{title}</h2>
         <p className="text-xl text-muted-foreground mb-8">
-          En Gema te ofrecemos desarrollados de primer nivel para potenciar tu éxito, rompiendo límites, impulsando la innovación y entregando resultados extraordinarios.
+          {description}
         </p>
         <Button
           size="lg"
