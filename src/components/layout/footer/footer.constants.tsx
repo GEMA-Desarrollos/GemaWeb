@@ -1,4 +1,5 @@
 import { IconXSocial, IconFacebookSocial, IconInstagramSocial, IconYoutubeSocial, IconWhatsappSocial } from "@/components/shared/icons"
+import { CONTACT_INFO } from "@/components/shared"
 
 export const ABOUT_INFO = {
   title: "Sobre nosotros",
@@ -32,7 +33,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "WhatsApp",
-    link: "https://wa.me/5493515199330",
+    link: `${CONTACT_INFO.whatsapp.support}`,
     icon: IconWhatsappSocial,
     bgColor: "bg-whatsapp-green",
   },
