@@ -1,9 +1,10 @@
 export interface Employee {
   id: number
-  image: string
-  name: string
-  position: string
-  description: string
+  image?: string
+  name?: string
+  position?: string
+  email?: string
+  description?: string
 }
 
 export interface Brand {

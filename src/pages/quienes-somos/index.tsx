@@ -1,9 +1,9 @@
 import { CallToActionSection } from "../home/call-to-action-section"
-import { PAGE_DATA, EMPLOYEES, BRANDS } from "./about.constants"
+import { PAGE_DATA, LIST_EMPLOYEES, /* BRANDS */ } from "./about.constants"
 import { HeroSection } from "./hero-section"
 import { ValuesSection } from "./values-section"
 import { TeamSection } from "./team-section"
-import { TrustedBrandsSection } from "./trusted-brands-section"
+// import { TrustedBrandsSection } from "./trusted-brands-section"
 
 export function QuienesSomosPage() {
   return (
@@ -20,13 +20,13 @@ export function QuienesSomosPage() {
       <TeamSection
         title={PAGE_DATA.team.title}
         description={PAGE_DATA.team.description}
-        employees={EMPLOYEES}
+        employees={LIST_EMPLOYEES}
       />
-      <TrustedBrandsSection
+      {/* <TrustedBrandsSection
         title={PAGE_DATA.trustedBrands.title}
         description={PAGE_DATA.trustedBrands.description}
         brands={BRANDS}
-      />
+      /> */}
       <CallToActionSection
         title={PAGE_DATA.callToAction.title}
         description={PAGE_DATA.callToAction.description}

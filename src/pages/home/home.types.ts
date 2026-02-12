@@ -88,7 +88,7 @@ export interface PageInfo {
     title: string
     description: string
   }
-  stats: {
+  features: {
     title: string
     description: string
   }

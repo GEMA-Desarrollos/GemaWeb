@@ -15,7 +15,7 @@ export function CallToActionSection({ title, description }: CallToActionSectionP
       className="py-15 border-t border-gray-200"
     >
       <div className="container-custom text-center">
-        <h2 className="text-4xl font-bold mb-4">{title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">{title}</h2>
         <p className="text-xl text-muted-foreground mb-8">
           {description}
         </p>

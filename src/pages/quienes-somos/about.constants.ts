@@ -1,60 +1,113 @@
-import { 
-  IconGoogleBrand, 
-  IconWindowsBrand, 
-  IconGithubBrand, 
-  IconAmdBrand, 
-  IconChatgptBrand, 
-  IconBitcoinBrand, 
-  IconIntelBrand, 
-  IconMcdonaldBrand 
-} from "@/components/shared/icons"
+import { IconGoogleBrand, IconWindowsBrand, IconGithubBrand, IconAmdBrand, IconChatgptBrand, IconBitcoinBrand, IconIntelBrand, IconMcdonaldBrand } from "@/components/shared/icons"
 import videoHero from "@/assets/video-hero-render.webm"
 import type { Employee, Brand, PageInfo } from "./about.types"
 
-export const EMPLOYEES: Employee[] = [
+export const PAGE_DATA: PageInfo = {
+  hero: {
+    video: videoHero,
+    title: "Ingeniería que impulsa tu negocio", // Más directo
+    description: "Desde 2003, en Gema diseñamos soluciones a medida que modernizan y automatizan procesos. Transformamos tus desafíos operativos en ventajas competitivas reales, optimizando costos y potenciando tu crecimiento.",
+  },
+  ourValues: {
+    title: "Nuestros pilares",
+    description: "Combinamos dos décadas de experiencia con tecnología de vanguardia. No solo escribimos código, creamos sistemas diseñados para generar resultados tangibles, enfocados en la eficiencia operativa y la escalabilidad de tu empresa."
+  },
+  team: {
+    title: "Nosotros",
+    description: "Somos especialistas apasionados por la tecnología y la resolución de problemas complejos. Nos destacamos por nuestra versatilidad y por brindar un acompañamiento integral, asegurándonos de que cada línea de código aporte valor a tu visión."
+  },
+  trustedBrands: {
+    title: "Confían en nosotros",
+    description: "Empresas líderes confían en nuestra trayectoria para llevar su operación al siguiente nivel."
+  },
+  callToAction: {
+    title: "¿Impulsamos tu próximo proyecto?",
+    description: "Ponemos a tu disposición 20 años de experiencia en desarrollo de primer nivel para potenciar tu éxito con soluciones robustas e innovadoras."
+  }
+}
+
+export const LIST_EMPLOYEES: Employee[] = [
   {
     id: 1,
     image: "https://www.loremfaces.net/256/id/1.jpg",
-    name: "Amit Sion",
-    position: "Chief Executive Officer",
-    description: "Amit es una líder creativo, visionaria y decidida, con un historial probado de integración y elevación de estrategias de salida al mercado que impulsan ingresos y crecimiento de clientes, incluso mientras navega por incertidumbres económicas y periodos de crecimiento. Es un líder de opinión reconocido en la industria y un ponente muy solicitado sobre temas como el trabajo remoto, la ampliación de equipos tecnológicos y el futuro del trabajo en un panorama digital en rápida evolución."
+    name: "Pagliarone, Marcos",
+    position: "Cofundador de Gema y Analista de Sistemas",
+    email: "sistemagema@gmail.com",
+    description: "Cofundador con más de 20 años liderando la visión tecnológica de Gema. Su enfoque en el análisis de sistemas ha sido el pilar para construir soluciones robustas que siguen evolucionando día a día."
   },
   {
     id: 2,
     image: "https://www.loremfaces.net/256/id/2.jpg",
-    name: "Aschwin Beurskens",
-    position: "Chief Strategy Officer",
-    description: "Un veterano de la industria de servicios profesionales, Aschwin aporta casi 30 años de experiencia en el crecimiento y la maduración de capacidades digitales para empresas globales. Habiendo ocupado roles de liderazgo en Oracle, Wipro, Marsh & McLennan y Thoughtworks, Aschwin ha demostrado éxito en la escalabilidad de negocios y la construcción de equipos de alto rendimiento."
+    name: "Montenegro, Fernando",
+    position: "Cofundador de Gema, Técnico Contable y Analista de Sistemas",
+    email: "sistemagema@gmail.com",
+    description: "Con dos décadas al frente de la empresa, Fernando combina su expertise contable con el análisis de sistemas para garantizar que nuestro software no solo sea técnico, sino una herramienta de gestión eficiente y precisa."
   },
   {
     id: 3,
     image: "https://www.loremfaces.net/256/id/3.jpg",
-    name: "Josh Johnston",
-    position: "CTO",
-    description: "Josh es un líder técnico con más de dos décadas de experiencia en la construcción de sistemas web resilientes e innovadores. Como pionero y defensor del trabajo remoto y los equipos de software distribuidos, siempre está ansioso por aprender sobre la intersección entre la excelencia técnica y el equilibrio entre la vida laboral y personal del equipo y la organización que lo construye."
+    name: "Filippi Nicolas",
+    position: "Soporte y Atención al Cliente",
+    email: "gema.nicolas@hotmail.com",
+    description: "Una pieza histórica en la evolución de Gema. Con una trayectoria casi tan extensa como la de sus fundadores, Nico aporta un conocimiento profundo del sistema y una cercanía inigualable con nuestros clientes."
   },
   {
     id: 4,
     image: "https://www.loremfaces.net/256/id/4.jpg",
-    name: "Jane Smith",
-    position: "Chief Marketing Officer",
-    description: "Jane es una ejecutiva de marketing dinámica con más de 15 años de experiencia en estrategia de marca, marketing digital y compromiso con el cliente. Tiene un historial comprobado de impulsar el crecimiento y construir identidades de marca sólidas."
+    name: "Muratore Giuliano",
+    position: "Desarrollador de Software",
+    email: "gema.giulianomuratore@gmail.com",
+    description: "Ingeniero recientemente graduado con un fuerte enfoque en arquitectura y backend. Aporta frescura técnica y una visión analítica clave para la escalabilidad de nuestras plataformas."
   },
   {
     id: 5,
-    image: "https://www.loremfaces.net/256/id/5.jpg",
-    name: "Sarah Prelorenzo",
-    position: "Chief Financial Officer",
-    description: "Sarah es una líder financiera estratégica con un enfoque transformador y un historial comprobado en la posicionamiento de organizaciones para un crecimiento acelerado. Su experiencia va más allá de los roles financieros tradicionales, abarcando fusiones y adquisiciones, cumplimiento, gestión de riesgos, estrategia fiscal global y derecho laboral en Australia, Canadá y Estados Unidos."
+    image: "https://www.loremfaces.net/256/id/1.jpg",
+    name: "Gimenez Lucas",
+    position: "Desarrollador de software",
+    email: "lucas@example.com",
+    description: "Programador fullstack con un enfoque integral en velocidad, experiencia de usuario y accesibilidad, asegurando que cada solución sea rápida, intuitiva y funcional para todos los perfiles de usuario."
   },
   {
     id: 6,
-    image: "https://www.loremfaces.net/256/id/1.jpg",
-    name: "Gemma Versace",
-    position: "Chief Client Officer",
-    description: "Gemma es una líder global de ventas con 18 años de éxito en los sectores de tecnología de gestión de personal y fuerza laboral. Ha liderado equipos globales de ventas, éxito del cliente y asociaciones para algunas de las marcas más icónicas del mundo."
+    image: "https://www.loremfaces.net/256/id/2.jpg",
+    name: "Lemos Gonzalo",
+    position: "Team Leader de Soporte",
+    email: "gema.gonzalo87@gmail.com",
+    description: "Con más de 5 años en el equipo, Gonzalo lidera el área de soporte con un enfoque resolutivo, asegurando que cada cliente reciba asistencia técnica de primer nivel y coordinando el flujo de trabajo del equipo."
   },
-]
+  {
+    id: 7,
+    image: "https://www.loremfaces.net/256/id/3.jpg",
+    name: "Boiffier Pedro Alexis",
+    position: "Soporte y Desarrollo",
+    email: "alexis@example.com",
+    description: "Un perfil híbrido y versátil. Alexis conecta las necesidades directas del usuario en soporte con la implementación de mantenimiento y mejoras en el desarrollo de software."
+  },
+  {
+    id: 8,
+    image: "https://www.loremfaces.net/256/id/4.jpg",
+    name: "Demaria Dayana",
+    position: "Soporte y Capacitaciones",
+    email: "dayana@example.com",
+    description: "Especialista en capacitaciones con un marcado perfil comercial. Dayana se asegura de que cada cliente aproveche al máximo el potencial del sistema, facilitando la adopción tecnológica con claridad y empatía."
+  },
+  {
+    id: 9,
+    image: "https://www.loremfaces.net/256/id/1.jpg",
+    name: "Fraga Johana",
+    position: "Administración",
+    email: "johana@example.com",
+    description: "Responsable de la gestión administrativa de la empresa, garantizando que los procesos internos fluyan con orden y transparencia para respaldar el crecimiento operativo de Gema."
+  },
+  {
+    id: 10,
+    image: "https://www.loremfaces.net/256/id/2.jpg",
+    name: "Pigini Luciano",
+    position: "Soporte y Atención al Cliente",
+    email: "luciano@example.com",
+    description: "Dedicado a brindar soluciones rápidas y efectivas, Luciano es parte esencial del equipo de atención, manteniendo altos estándares de satisfacción en el trato diario con nuestros usuarios."
+  },
+];
 
 export const BRANDS: Brand[] = [
   { id: 1, Icon: IconGoogleBrand, name: "Google" },
@@ -66,27 +119,3 @@ export const BRANDS: Brand[] = [
   { id: 7, Icon: IconIntelBrand, name: "Intel" },
   { id: 8, Icon: IconMcdonaldBrand, name: "McDonald's" },
 ]
-
-export const PAGE_DATA: PageInfo = {
-  hero: {
-    video: videoHero,
-    title: "Ingeniería e innovación",
-    description: "Desde 2006, Gema impulsa el crecimiento tanto de los desarrolladores como de las empresas que los contratan. Conectamos a los mejores ingenieros de todo el mundo con marcas líderes, adaptando sus habilidades técnicas y su adaptación cultural a los objetivos de cada cliente.",
-  },
-  ourValues: {
-    title: "Nuestros valores",
-    description: "Nuestra cultura Sigue Avanzando fomenta un entorno único y de apoyo donde los desarrolladores prosperan. Priorizamos el aprendizaje continuo, el acceso a tecnología avanzada, el apoyo al bienestar y las iniciativas con propósito. Esto crea un ecosistema potente que impulsa la innovación del cliente y empodera a los desarrolladores para alcanzar resultados ambiciosos."
-  },
-  team: {
-    title: "Nosotros",
-    description: "Un equipo comprometido con la excelencia y la innovación, trabajando juntos para lograr resultados excepcionales."
-  },
-  trustedBrands: {
-    title: "Confían en nosotros...",
-    description: "Empresas líderes a nivel mundial eligen nuestros servicios y productos"
-  },
-  callToAction: {
-    title: "¿Listo para comenzar?",
-    description: "En Gema te ofrecemos desarrollados de primer nivel para potenciar tu éxito, rompiendo límites, impulsando la innovación y entregando resultados extraordinarios."
-  }
-}

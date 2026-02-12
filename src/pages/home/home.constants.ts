@@ -19,20 +19,20 @@ export const PAGE_DATA: PageInfo = {
     description: "Soluciones tecnológicas innovadoras y escalables, diseñadas para optimizar tus procesos y acelerar el crecimiento de tu empresa.",
   },
   products: {
-    title: "Nuestros Productos",
-    description: "Desarrollamos software especializado para la gestión integral de negocios, adaptándonos a las necesidades específicas de cada establecimiento."
+    title: "Soluciones a tu medida",
+    description: "Desde sistemas de gestión integral hasta desarrollos específicos, adaptamos nuestra tecnología al flujo de trabajo de tu empresa."
   },
-  stats: {
-    title: "Características Principales",
-    description: "Sistema Gema está diseñado pensando en la experiencia del usuario y la eficiencia operativa."
+  features: {
+    title: "¿Por qué elegir Gema?",
+    description: "Nuestra plataforma combina una interfaz intuitiva con la potencia técnica necesaria para gestionar negocios de alta complejidad"
   },
   testimonials: {
     title: "Lo que dicen nuestros clientes",
     description: "Miles de empresas confían en nuestras soluciones. Conocé las experiencias de quienes ya transformaron su negocio."
   },
   callToAction: {
-    title: "¿Listo para comenzar?",
-    description: "En Gema te ofrecemos desarrollados de primer nivel para potenciar tu éxito, rompiendo límites, impulsando la innovación y entregando resultados extraordinarios."
+    title: "¿Estás listo para dar el siguiente paso?",
+    description: "Hablemos de tu proyecto. Ponemos nuestra experiencia a tu servicio para crear la herramienta que tu empresa necesita hoy."
   }
 }
 
@@ -50,7 +50,7 @@ export const LIST_PRODUCTS: readonly Product[] = [
   },
   {
     icon: iconTurnero,
-    title: "Turnero Gema",
+    title: "Turnero",
     description: "Sistema de gestión de turnos digital que elimina filas y organiza la atención al cliente de forma eficiente.",
     features: [
       "Turnos por DNI, CUIL o número secuencial",
@@ -61,7 +61,7 @@ export const LIST_PRODUCTS: readonly Product[] = [
   },
   {
     icon: iconFeComercios,
-    title: "Facturación-E",
+    title: "eGema",
     description: "Sistema integrado con facturación electrónica.",
     features: [
       "Facturación online sin impresora fiscal",

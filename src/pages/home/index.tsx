@@ -21,8 +21,8 @@ export function HomePage() {
       />
       <StatsSection stats={LIST_STATS} />
       <FeaturesSection
-        title={PAGE_DATA.stats.title}
-        description={PAGE_DATA.stats.description}
+        title={PAGE_DATA.features.title}
+        description={PAGE_DATA.features.description}
         features={LIST_FEATURES}
       />
       <TestimonialsSection

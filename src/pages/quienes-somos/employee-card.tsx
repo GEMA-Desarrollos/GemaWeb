@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import type { EmployeeCardProps } from "./about.types"
 
 export function EmployeeCard({ employee, index }: EmployeeCardProps) {
@@ -19,6 +21,19 @@ export function EmployeeCard({ employee, index }: EmployeeCardProps) {
         <h3 className="mb-4 text-2xl md:text-3xl font-bold">{employee.name}</h3>
         <h4 className="mb-2 text-xl md:text-2xl font-semibold text-light-blue">{employee.position}</h4>
         <p className="text-base md:text-lg">{employee.description}</p>
+        {employee.email && (
+          <Button 
+            asChild 
+            variant="outline" 
+            size="default"
+            className="mt-4 w-fit mx-auto sm:mx-0"
+          >
+            <a href={`mailto:${employee.email}`}>
+              <Mail className="mr-2 h-4 w-4" />
+              Contactar
+            </a>
+          </Button>
+        )}
       </div>
     </div>
   )

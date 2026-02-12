@@ -20,7 +20,7 @@ export function FeaturesSection({ title, description, features }: FeaturesSectio
           }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <h2 className="text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
             {title}
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-4xl mx-auto">

@@ -16,7 +16,7 @@ export function TeamSection({ title, description, employees }: TeamSectionProps)
       <div className="relative z-10">
         <div className="pb-4">
           <h2 className="text-4xl font-bold text-center mb-4">{title}</h2>
-          <p className="text-xl text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
+          <p className="text-xl text-muted-foreground text-center px-4 mb-12 max-w-4xl mx-auto">
             {description}
           </p>
         </div>
