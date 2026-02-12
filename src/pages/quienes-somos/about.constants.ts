@@ -22,7 +22,7 @@ export const PAGE_DATA: PageInfo = {
   },
   callToAction: {
     title: "¿Impulsamos tu próximo proyecto?",
-    description: "Ponemos a tu disposición 20 años de experiencia en desarrollo de primer nivel para potenciar tu éxito con soluciones robustas e innovadoras."
+    description: "Ponemos a tu disposición experiencia en desarrollo de primer nivel para potenciar tu éxito con soluciones robustas e innovadoras."
   }
 }
 
