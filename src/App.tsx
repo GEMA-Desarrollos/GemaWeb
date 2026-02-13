@@ -8,10 +8,12 @@ import { SoporteTecnicoPage } from "./pages/soporte-tecnico"
 import { QuienesSomosPage } from "./pages/quienes-somos"
 import { ContactoPage } from "./pages/contacto"
 import { DescargasPage } from "./pages/descargas"
+import ScrollToTop from "./components/shared/scroll-on-top"
 
 export function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 pt-16">
