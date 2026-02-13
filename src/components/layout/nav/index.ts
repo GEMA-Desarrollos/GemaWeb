@@ -1,4 +1,6 @@
 export { Nav } from "./nav"
+export { NavDesktopItem } from "./nav-desktop-item"
+export { NavMobileItem } from "./nav-mobile-item"
 export type { NavProps, NavMenuItem, NavDropdownItem } from "./nav.types"
 export { NAV_MENU_ITEMS } from "./nav.constants"
 export { useNavMenu } from "./nav.hooks"
