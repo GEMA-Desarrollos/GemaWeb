@@ -1,13 +1,4 @@
-export interface NavDropdownItem {
-  link: string
-  label: string
-}
-
-export interface NavMenuItem {
-  label: string
-  link?: string // Para items sin dropdown
-  items?: readonly NavDropdownItem[] // Para items con dropdown
-}
+import type { NavMenuItem } from "./nav.types"
 
 export const NAV_MENU_ITEMS: readonly NavMenuItem[] = [
   {
@@ -35,13 +26,4 @@ export const NAV_MENU_ITEMS: readonly NavMenuItem[] = [
     label: "Medios de Pago",
     link: "/medios-pago",
   },
-] as const
-
-export const FOOTER_LINKS = [
-  { link: "/", label: "Inicio" },
-  { link: "/medios-pago", label: "Medios de pago" },
-  { link: "/quienes-somos", label: "Quiénes Somos" },
-  { link: "/descargas", label: "Descargas" },
-  { link: "/soporte-tecnico", label: "Soporte Técnico" },
-  { link: "/contacto", label: "Contacto" },
 ] as const

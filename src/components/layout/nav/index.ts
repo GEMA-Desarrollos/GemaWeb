@@ -1,4 +1,6 @@
 export { Nav } from "./nav"
 export type { NavProps, NavMenuItem, NavDropdownItem } from "./nav.types"
-export { NAV_MENU_ITEMS, FOOTER_LINKS } from "./nav.constants"
-export type { NavDropdownItem as NavDropdownItemType, NavMenuItem as NavMenuItemType } from "./nav.constants"
+export { NAV_MENU_ITEMS } from "./nav.constants"
+export { useNavMenu } from "./nav.hooks"
+export type { UseNavMenuReturn } from "./nav.hooks"
+export { isExternalLink } from "./nav.utils"

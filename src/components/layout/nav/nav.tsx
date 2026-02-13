@@ -4,32 +4,11 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, } from "@/components/ui/dropdown-menu"
 import { MenuIcon, XIcon, ChevronDownIcon } from "lucide-react"
 import type { NavProps, NavMenuItem } from "./nav.types"
-
-// Helper para detectar enlaces externos
-const isExternalLink = (url: string): boolean => {
-  return url.startsWith("http://") || url.startsWith("https://") || url.startsWith("//")
-}
+import { useNavMenu } from "./nav.hooks"
+import { isExternalLink } from "./nav.utils"
 
 export function Nav({ menuItems }: NavProps) {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const [openDropdown, setOpenDropdown] = React.useState<string | null>(null)
-
-  const toggleMenu = () => setIsOpen(!isOpen)
-  const closeMenu = () => {
-    setIsOpen(false)
-    setOpenDropdown(null)
-  }
-
-  React.useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement
-      if (!target.closest("nav") && isOpen) {
-        closeMenu()
-      }
-    }
-    document.addEventListener("click", handleClickOutside)
-    return () => document.removeEventListener("click", handleClickOutside)
-  }, [isOpen])
+  const { isOpen, openDropdown, toggleMenu, closeMenu, setOpenDropdown } = useNavMenu()
 
   const renderDesktopMenuItem = (item: NavMenuItem) => {
     // Item sin dropdown - link directo
