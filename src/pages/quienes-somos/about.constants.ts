@@ -1,6 +1,5 @@
-import { IconGoogleBrand, IconWindowsBrand, IconGithubBrand, IconAmdBrand, IconChatgptBrand, IconBitcoinBrand, IconIntelBrand, IconMcdonaldBrand } from "@/components/shared/icons"
 import videoHero from "@/assets/video-hero-render.webm"
-import type { Employee, Brand, PageInfo } from "./about.types"
+import type { Employee, PageInfo } from "./about.types"
 
 export const PAGE_DATA: PageInfo = {
   hero: {
@@ -112,14 +111,3 @@ export const LIST_EMPLOYEES: Employee[] = [
     description: "Dedicado a brindar soluciones rápidas y efectivas, Luciano es parte esencial del equipo de atención, manteniendo altos estándares de satisfacción en el trato diario con nuestros usuarios."
   },
 ];
-
-export const BRANDS: Brand[] = [
-  { id: 1, Icon: IconGoogleBrand, name: "Google" },
-  { id: 2, Icon: IconWindowsBrand, name: "Windows" },
-  { id: 3, Icon: IconGithubBrand, name: "GitHub" },
-  { id: 4, Icon: IconAmdBrand, name: "AMD" },
-  { id: 5, Icon: IconChatgptBrand, name: "ChatGPT" },
-  { id: 6, Icon: IconBitcoinBrand, name: "Bitcoin" },
-  { id: 7, Icon: IconIntelBrand, name: "Intel" },
-  { id: 8, Icon: IconMcdonaldBrand, name: "McDonald's" },
-]

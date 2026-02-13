@@ -7,6 +7,9 @@ import { PauseIcon, PlayIcon } from "lucide-react"
 import { useCarouselAutoscroll } from "./use-carousel-autoscroll"
 import type { TrustedBrandsSectionProps } from "./about.types"
 
+/**
+ * @deprecated se desestima su uso por ahora
+ */
 export function TrustedBrandsSection({ title, description, brands }: TrustedBrandsSectionProps) {
   const [api, setApi] = useState<CarouselApi>()
   const [isPaused, setIsPaused] = useState(false)

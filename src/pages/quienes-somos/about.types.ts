@@ -7,6 +7,9 @@ export interface Employee {
   description?: string
 }
 
+/**
+ * @deprecated se desestima usar marcas por ahora
+ */
 export interface Brand {
   id: number
   Icon: React.ComponentType<{ className?: string }>
