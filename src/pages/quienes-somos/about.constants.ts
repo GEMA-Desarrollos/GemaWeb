@@ -16,9 +16,13 @@ export const PAGE_DATA: PageInfo = {
     title: "Nosotros",
     description: "Somos especialistas apasionados por la tecnología y la resolución de problemas complejos. Nos destacamos por nuestra versatilidad y por brindar un acompañamiento integral, asegurándonos de que cada línea de código aporte valor a tu visión."
   },
-  trustedBrands: {
-    title: "Confían en nosotros",
-    description: "Empresas líderes confían en nuestra trayectoria para llevar su operación al siguiente nivel."
+  // trustedBrands: {
+  //   title: "Confían en nosotros",
+  //   description: "Empresas líderes confían en nuestra trayectoria para llevar su operación al siguiente nivel."
+  // },
+  whyChooseUs: {
+    title: "Hacemos que lo complejo parezca simple",
+    description: "Nos convertimos en tu brazo tecnológico para que vos te enfoques en lo que mejor sabés hacer. Resolvemos tus desafíos técnicos con soluciones escalables que se adaptan a tu ritmo de crecimiento."
   },
   callToAction: {
     title: "¿Impulsamos tu próximo proyecto?",
@@ -29,7 +33,7 @@ export const PAGE_DATA: PageInfo = {
 export const LIST_EMPLOYEES: Employee[] = [
   {
     id: 1,
-    image: "https://www.loremfaces.net/256/id/1.jpg",
+    image: "",
     name: "Pagliarone, Marcos",
     position: "Cofundador de Gema y Analista de Sistemas",
     email: "sistemagema@gmail.com",
@@ -37,7 +41,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 2,
-    image: "https://www.loremfaces.net/256/id/2.jpg",
+    image: "",
     name: "Montenegro, Fernando",
     position: "Cofundador de Gema, Técnico Contable y Analista de Sistemas",
     email: "sistemagema@gmail.com",
@@ -45,7 +49,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 3,
-    image: "https://www.loremfaces.net/256/id/3.jpg",
+    image: "",
     name: "Filippi Nicolas",
     position: "Soporte y Atención al Cliente",
     email: "gema.nicolas@hotmail.com",
@@ -53,7 +57,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 4,
-    image: "https://www.loremfaces.net/256/id/4.jpg",
+    image: "",
     name: "Muratore Giuliano",
     position: "Desarrollador de Software",
     email: "gema.giulianomuratore@gmail.com",
@@ -61,7 +65,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 5,
-    image: "https://www.loremfaces.net/256/id/1.jpg",
+    image: "",
     name: "Gimenez Lucas",
     position: "Desarrollador de software",
     email: "lucas@example.com",
@@ -69,15 +73,15 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 6,
-    image: "https://www.loremfaces.net/256/id/2.jpg",
+    image: "",
     name: "Lemos Gonzalo",
-    position: "Team Leader de Soporte",
+    position: "Team Leader de Soporte y Analista de Sistemas",
     email: "gema.gonzalo87@gmail.com",
     description: "Con más de 5 años en el equipo, Gonzalo lidera el área de soporte con un enfoque resolutivo, asegurando que cada cliente reciba asistencia técnica de primer nivel y coordinando el flujo de trabajo del equipo."
   },
   {
     id: 7,
-    image: "https://www.loremfaces.net/256/id/3.jpg",
+    image: "",
     name: "Boiffier Pedro Alexis",
     position: "Soporte y Desarrollo",
     email: "alexis@example.com",
@@ -85,7 +89,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 8,
-    image: "https://www.loremfaces.net/256/id/4.jpg",
+    image: "",
     name: "Demaria Dayana",
     position: "Soporte y Capacitaciones",
     email: "dayana@example.com",
@@ -93,7 +97,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 9,
-    image: "https://www.loremfaces.net/256/id/1.jpg",
+    image: "",
     name: "Fraga Johana",
     position: "Administración",
     email: "johana@example.com",
@@ -101,7 +105,7 @@ export const LIST_EMPLOYEES: Employee[] = [
   },
   {
     id: 10,
-    image: "https://www.loremfaces.net/256/id/2.jpg",
+    image: "",
     name: "Pigini Luciano",
     position: "Soporte y Atención al Cliente",
     email: "luciano@example.com",

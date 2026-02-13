@@ -165,5 +165,14 @@ export function IconFontsFile(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+export function IconUserAvatar(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg enableBackground="new 0 0 100 100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor" {...props}>
+      <path d="m8.3817997 97.5c0-22.9850998 18.6331024-41.6182022 41.6182022-41.6182022s41.6182003 18.6331024 41.6182003 41.6182022z"/>
+      <circle cx="50" cy="26.566" r="24.066"/>
+    </svg>
+  )
+}
+
 
 

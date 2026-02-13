@@ -3,6 +3,7 @@ import { PAGE_DATA, LIST_EMPLOYEES, /* BRANDS */ } from "./about.constants"
 import { HeroSection } from "./hero-section"
 import { ValuesSection } from "./values-section"
 import { TeamSection } from "./team-section"
+import { WhyChooseUsSection } from "./why-choose-us-section"
 // import { TrustedBrandsSection } from "./trusted-brands-section"
 
 export function QuienesSomosPage() {
@@ -21,6 +22,10 @@ export function QuienesSomosPage() {
         title={PAGE_DATA.team.title}
         description={PAGE_DATA.team.description}
         employees={LIST_EMPLOYEES}
+      />
+      <WhyChooseUsSection
+        title={PAGE_DATA.whyChooseUs.title}
+        description={PAGE_DATA.whyChooseUs.description}
       />
       {/* <TrustedBrandsSection
         title={PAGE_DATA.trustedBrands.title}

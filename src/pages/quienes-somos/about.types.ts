@@ -27,7 +27,11 @@ export interface PageInfo {
     title: string
     description: string
   }
-  trustedBrands: {
+  // trustedBrands: {
+  //   title: string
+  //   description: string
+  // }
+  whyChooseUs: {
     title: string
     description: string
   }
@@ -57,6 +61,11 @@ export interface TeamSectionProps {
 export interface EmployeeCardProps {
   employee: Employee
   index: number
+}
+
+export interface WhyChooseUsSectionProps {
+  title: string
+  description: string
 }
 
 export interface TrustedBrandsSectionProps {
